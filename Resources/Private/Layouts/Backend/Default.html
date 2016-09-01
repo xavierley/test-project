@@ -1,0 +1,31 @@
+<f:be.container 
+	includeJsFiles="{0:'{f:uri.resource(path:\'Js/jquery-1.7.2.min.js\')}',1:'{f:uri.resource(path:\'Js/eannuaires.js\')}'}" 
+	includeCssFiles="{0:'{f:uri.resource(path:\'Css/eannuaires.css\')}'}" 
+>	
+	<div class="typo3-fullDoc">
+		<div id="typo3-docheader">
+			<div class="typo3-docheader-functions">
+				<div class="left">
+					<f:be.buttons.csh />
+					<f:be.menus.actionMenu>
+						<f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:e_annuaires/Resources/Private/Language/locallang_annuaires.xlf:module.gestionConf')}" controller="Conf\Conf" action="index" />
+						<f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:e_annuaires/Resources/Private/Language/locallang_annuaires.xlf:module.importConf')}" controller="Conf\Conf" action="import" />
+						<f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:e_annuaires/Resources/Private/Language/locallang_annuaires.xlf:module.exportConf')}" controller="Conf\Conf" action="export" />
+						<f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:e_annuaires/Resources/Private/Language/locallang_annuaires.xlf:module.convertConf')}" controller="Conf\Conf" action="convert" />
+						<f:be.menus.actionMenuItem label="{f:translate(key: 'LLL:EXT:e_annuaires/Resources/Private/Language/locallang_annuaires.xlf:module.formConf')}" controller="Conf\Form" action="manageForm" />
+					</f:be.menus.actionMenu>
+				</div>
+
+				<div class="right">
+					<f:be.pagePath />
+					<f:be.pageInfo />
+				</div>
+			</div>
+		</div>
+		<div id="typo3-docbody">
+			<div id="typo3-inner-docbody" class="news-administration">
+				<f:render section="content" />
+			</div>
+		</div>
+	</div>
+</f:be.container>

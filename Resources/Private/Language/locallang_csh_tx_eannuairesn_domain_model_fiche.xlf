@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-10-25T09:35:14Z" product-name="e_annuaires">
+		<header/>
+		<body>
+
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="firstname.description">
+				<source>firstname</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="zipcode.description">
+				<source>zipcode</source>
+			</trans-unit>
+			<trans-unit id="bp.description">
+				<source>bp</source>
+			</trans-unit>
+			<trans-unit id="cell.description">
+				<source>cell</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="config.description">
+				<source>config</source>
+			</trans-unit>
+			<trans-unit id="typeelement.description">
+				<source>typeelement</source>
+			</trans-unit>
+			<trans-unit id="lat.description">
+				<source>lat</source>
+			</trans-unit>
+			<trans-unit id="lng.description">
+				<source>lng</source>
+			</trans-unit>
+			<trans-unit id="picto.description">
+				<source>picto</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="www.description">
+				<source>www</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="feuser.description">
+				<source>feuser</source>
+			</trans-unit>
+			<trans-unit id="civility.description">
+				<source>civility</source>
+			</trans-unit>
+			<trans-unit id="office.description">
+				<source>office</source>
+			</trans-unit>
+			<trans-unit id="categories.description">
+				<source>categories</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="district.description">
+				<source>district</source>
+			</trans-unit>
+			<trans-unit id="documents.description">
+				<source>documents</source>
+			</trans-unit>
+
+
+			<trans-unit id="adressePp">
+				<source>Adresse Principale</source>
+			</trans-unit>
+			<trans-unit id="adresseSc">
+				<source>Adresse Secondaire</source>
+			</trans-unit>
+			<trans-unit id="situationAdm">
+				<source>Situation administrative</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

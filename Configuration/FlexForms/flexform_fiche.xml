@@ -1,0 +1,616 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_tab.settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+						<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode</label>
+						<onChange>reload</onChange> 
+						<config>
+							<type>select</type>
+							<items>
+								<numIndex index="0">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.standard</numIndex>
+									<numIndex index="1">--div--</numIndex>
+								</numIndex>
+								<numIndex index="1">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.e_annuaires_listOnly</numIndex>
+									<numIndex index="1">Fiche->list</numIndex>
+								</numIndex>
+								<numIndex index="2">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.e_annuaires_show</numIndex>
+									<numIndex index="1">Fiche->show</numIndex>
+								</numIndex>
+								<numIndex index="9">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.e_annuaires_catmenu</numIndex>
+									<numIndex index="1">Fiche->catmenu</numIndex>
+								</numIndex>
+								<numIndex index="3">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.search</numIndex>
+									<numIndex index="1">--div--</numIndex>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.e_annuaires_recherche</numIndex>
+									<numIndex index="1">Fiche->search</numIndex>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.e_annuaires_resultat</numIndex>
+									<numIndex index="1">Fiche->resultat</numIndex>
+								</numIndex>
+								<numIndex index="6">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.form</numIndex>
+									<numIndex index="1">--div--</numIndex>
+								</numIndex>
+								<numIndex index="7">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.e_annuaires_new</numIndex>
+									<numIndex index="1">Editfe->manage;Editfe->edit;Editfe->create;Editfe->delete</numIndex>
+								</numIndex>
+								<numIndex index="8">
+									<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.mode.send_mail</numIndex>
+									<numIndex index="1">Fiche->sendMail</numIndex>
+								</numIndex>
+							</items>
+						</config>
+						</TCEforms>
+					</switchableControllerActions>
+					<settings.templateLayoutListe>
+						<TCEforms>
+                                                    <displayCond>FIELD:switchableControllerActions:!IN:Fiche->show,Fiche->search,Fiche->resultat,Fiche->new,Fiche->edit,Fiche->catmenu,Editfe->manage;Editfe->edit</displayCond>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_template.templateLayoutListe</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_templateLayoutListe</itemsProcFunc>
+                                                            <items>
+                                                                    <numIndex index="0" type="array">
+                                                                            <numIndex index="0"></numIndex>
+                                                                            <numIndex index="1"></numIndex>
+                                                                    </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.templateLayoutListe>
+					<settings.templateLayoutDetail>
+						<TCEforms>
+                                                    <displayCond>FIELD:switchableControllerActions:=:Fiche->show</displayCond>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_template.templateLayoutDetail</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_templateLayoutDetail</itemsProcFunc>
+                                                            <items>
+                                                                    <numIndex index="0" type="array">
+                                                                            <numIndex index="0"></numIndex>
+                                                                            <numIndex index="1"></numIndex>
+                                                                    </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.templateLayoutDetail>
+					<settings.templateLayoutCatmenu>
+						<TCEforms>
+                                                    <displayCond>FIELD:switchableControllerActions:=:Fiche->catmenu</displayCond>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_template.templateLayoutCatmenu</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_templateLayoutCatmenu</itemsProcFunc>
+                                                            <items>
+                                                                    <numIndex index="0" type="array">
+                                                                            <numIndex index="0"></numIndex>
+                                                                            <numIndex index="1"></numIndex>
+                                                                    </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.templateLayoutCatmenu>
+					<settings.templateLayoutSearch>
+						<TCEforms>
+                                                    <displayCond>FIELD:switchableControllerActions:IN:Fiche->search</displayCond>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_template.templateLayoutSearch</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_templateLayoutSearch</itemsProcFunc>
+                                                            <items>
+                                                                    <numIndex index="0" type="array">
+                                                                            <numIndex index="0"></numIndex>
+                                                                            <numIndex index="1"></numIndex>
+                                                                    </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.templateLayoutSearch>
+					<settings.templateLayoutResult>
+						<TCEforms>
+                                                    <displayCond>FIELD:switchableControllerActions:IN:Fiche->resultat</displayCond>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_template.templateLayoutResult</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_templateLayoutResult</itemsProcFunc>
+                                                            <items>
+                                                                    <numIndex index="0" type="array">
+                                                                            <numIndex index="0"></numIndex>
+                                                                            <numIndex index="1"></numIndex>
+                                                                    </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.templateLayoutResult>
+					<settings.templateLayoutManage>
+						<TCEforms>
+                                                    <displayCond>FIELD:switchableControllerActions:IN:Editfe->manage;Editfe->edit;Editfe->create;Editfe->delete</displayCond>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_template.templateLayoutManage</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_templateLayoutManage</itemsProcFunc>
+                                                            <items>
+                                                                    <numIndex index="0" type="array">
+                                                                            <numIndex index="0"></numIndex>
+                                                                            <numIndex index="1"></numIndex>
+                                                                    </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.templateLayoutManage>
+				</el>
+			</ROOT>
+		</sDEF>
+<!--
+			################################
+			  SHEET Additional
+			################################
+		-->
+		<filterParams>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_tab.filter</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.filtre.ficheType.value>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_filter.type</label>
+							<config>
+                                <type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+								</items>
+								<foreign_table>tx_eannuaires_domain_model_typeannuaire</foreign_table>
+								<foreign_table_where> AND tx_eannuaires_domain_model_typeannuaire.hidden=0 AND tx_eannuaires_domain_model_typeannuaire.deleted=0</foreign_table_where>
+							</config>
+						</TCEforms>
+					</settings.filtre.ficheType.value>
+					<settings.filtre.pidList.value>
+						<TCEforms>
+							<exclude>1</exclude>
+							<label>LLL:EXT:lang/locallang_general.php:LGL.startingpoint</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>3</size>
+								<maxitems>22</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+                                    <wizards>
+                                        <suggest>
+                                            <type>suggest</type>
+                                        </suggest>
+                                    </wizards>
+							</config>
+						</TCEforms>
+					</settings.filtre.pidList.value>
+					<!-- recursive -->
+					<settings.filtre.pidList.recursive>
+						<TCEforms>
+							<label>LLL:EXT:lang/locallang_general.xlf:LGL.recursive</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+										<numIndex index="1">250</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.filtre.pidList.recursive>
+
+					<!-- Category -->
+					<settings.filtre.whichMember.value>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.whichMember</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_eannuaires_domain_model_fiche</allowed>
+								<size>10</size>
+								<minitems>0</minitems>
+								<maxitems>10</maxitems>
+							</config>
+						</TCEforms>
+					</settings.filtre.whichMember.value>					
+					<!-- Category -->
+					<settings.filtre.categories.value>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.categories</label>
+                                                            <config>
+                                                                  <type>select</type>
+                                                                  <autoSizeMax>50</autoSizeMax>
+                                                                  <foreign_table>sys_category</foreign_table>
+                                                                  <foreign_table_where> AND sys_category.sys_language_uid IN (-1, 0) ORDER BY sys_category.title ASC</foreign_table_where>
+                                                                  <maxitems>9999</maxitems>
+                                                                  <renderMode>tree</renderMode>
+                                                                  <size>10</size>
+                                                                  <treeConfig>
+                                                                          <appearance>
+                                                                                  <expandAll>1</expandAll>
+                                                                                  <showHeader>1</showHeader>
+                                                                          </appearance>
+                                                                          <parentField>parent</parentField>
+                                                                  </treeConfig>
+                                                            </config>
+						</TCEforms>
+					</settings.filtre.categories.value>
+					<settings.search.properties.category.array.displayParent>
+						<TCEforms>
+                                                    <label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_db.xlf:flexform.filtres.categories.displayParent</label>
+                                                    <config>
+                                                            <type>select</type>
+                                                            <items type="array">
+                                                                <numIndex index="0" type="array">
+                                                                        <numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_db.xlf:flexform.filtres.categories.displayParent.1</numIndex>
+                                                                        <numIndex index="1"></numIndex>
+                                                                </numIndex>
+                                                                <numIndex index="1" type="array">
+                                                                        <numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_db.xlf:flexform.filtres.categories.displayParent.2</numIndex>
+                                                                        <numIndex index="1">1</numIndex>
+                                                                </numIndex>
+                                                                <numIndex index="2" type="array">
+                                                                        <numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_db.xlf:flexform.filtres.categories.displayParent.3</numIndex>
+                                                                        <numIndex index="1">2</numIndex>
+                                                                </numIndex>
+                                                            </items>
+                                                    </config>
+						</TCEforms>
+					</settings.search.properties.category.array.displayParent>
+					<!-- recursive -->
+					<settings.filtre.categories.recursive>
+						<TCEforms>
+							<label>LLL:EXT:lang/locallang_general.xlf:LGL.recursive</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+										<numIndex index="1">250</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.filtre.categories.recursive>
+					<!-- recursive -->
+					<settings.filtre.categories.andOr>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.catAndOr</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.catAndOr.1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.catAndOr.2</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.catAndOr.3</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.filtre.categories.andOr>
+				</el>
+			</ROOT>
+		</filterParams>
+<!--
+			################################
+			  SHEET Additional
+			################################
+		-->
+		<additional>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_tab.additional</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<!-- PID Single Page -->
+					<settings.detailPid>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.detailPid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.detailPid>
+					<!-- PID Single Page -->
+					<settings.listPid>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.listPid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.listPid>
+					<!-- PID Single Page -->
+					<settings.resultPid>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.resultPid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.resultPid>
+					<settings.pageBrowser>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.pageBrowser</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.pageBrowser>
+					<settings.nbElement>                                            
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.nbElement</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<default>5</default>
+							</config>
+						</TCEforms>
+					</settings.nbElement>
+					<settings.menu_abc>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.menu_abc</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.menu_abc>
+					<!-- order -->
+					<settings.orderBy>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.orderBy</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.orderBy.tstamp</numIndex>
+										<numIndex index="1">tstamp</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.orderBy.sorting</numIndex>
+										<numIndex index="1">sorting</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.orderBy.crdate</numIndex>
+										<numIndex index="1">crdate</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_general.orderBy.title</numIndex>
+										<numIndex index="1">title</numIndex>
+									</numIndex>
+								</items>
+                                                                <itemsProcFunc>Emagineurs\EAnnuaires\Hooks\ItemsProcFunc->user_addSortingFields</itemsProcFunc>
+							</config>
+						</TCEforms>
+					</settings.orderBy>
+					<settings.ordre>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.ordre</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.ordre.asc</numIndex>
+										<numIndex index="1">ASC</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_additional.ordre.desc</numIndex>
+										<numIndex index="1">DESC</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.ordre>
+				</el>
+			</ROOT>
+		</additional>
+<!--
+			################################
+			  SHEET Additional
+			################################
+		-->
+		<editFe>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_tab.editFe</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<!-- Type des fiches générées pas ce formulaire -->
+					<settings.editFe.defaultValues.typeelement>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_filter.type</label>
+							<config>
+                                <type>select</type>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+								</items>
+								<foreign_table>tx_eannuaires_domain_model_typeannuaire</foreign_table>
+								<foreign_table_where> AND tx_eannuaires_domain_model_typeannuaire.hidden=0 AND tx_eannuaires_domain_model_typeannuaire.deleted=0</foreign_table_where>
+							</config>
+						</TCEforms>
+					</settings.editFe.defaultValues.typeelement>
+					<!-- PID de la fiche générée -->
+					<settings.editFe.defaultValues.pid>
+						<TCEforms>
+							<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_editFe.storagePid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<show_thumbs>1</show_thumbs>
+								<wizards>
+									<suggest>
+										<type>suggest</type>
+									</suggest>
+								</wizards>
+							</config>
+						</TCEforms>
+					</settings.editFe.defaultValues.pid>
+				</el>
+			</ROOT>
+		</editFe>
+		<!--
+			################################
+			  SHEET Template
+			################################
+		-->
+		<template>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms_tab.template</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.myTS>
+							<TCEforms>
+									<displayCond>HIDE_FOR_NON_ADMINS</displayCond>
+									<exclude>1</exclude>
+									<label>LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:flexforms.tab.ts</label>
+									<config>
+											<type>text</type>
+											<cols>80</cols>
+											<rows>10</rows>
+									</config>
+							</TCEforms>
+					</settings.myTS> 
+				</el>
+			</ROOT>
+		</template>
+	</sheets>
+</T3DataStructure>

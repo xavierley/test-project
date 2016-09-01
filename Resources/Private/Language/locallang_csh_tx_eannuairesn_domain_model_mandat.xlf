@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-10-25T09:35:14Z" product-name="e_annuaires">
+		<header/>
+		<body>
+
+			<trans-unit id="typeMandat.description">
+				<source>Type de mandat</source>
+			</trans-unit>
+			<trans-unit id="communeMandat.description">
+				<source>Commune du mandat</source>
+			</trans-unit>
+			<trans-unit id="groupePolitique.description">
+				<source>Groupe politique</source>
+			</trans-unit>
+			<trans-unit id="circonscription.description">
+				<source>Circonscription</source>
+			</trans-unit>
+			<trans-unit id="siteInternet.description">
+				<source>Site Internet</source>
+			</trans-unit>
+			<trans-unit id="nomEpci.description">
+				<source>Nom de l' EPCI</source>
+			</trans-unit>
+			<trans-unit id="canton.description">
+				<source>Canton</source>
+			</trans-unit>
+			<trans-unit id="fonctions.description">
+				<source>Fonctions</source>
+			</trans-unit>
+			<trans-unit id="delegation.description">
+				<source>delegation</source>
+			</trans-unit>
+			<trans-unit id="fonctionAutre.description">
+				<source>Autre fonction</source>
+			</trans-unit>
+			<trans-unit id="commissions.description">
+				<source>Commissions</source>
+			</trans-unit>
+			<trans-unit id="representations.description">
+				<source>Représentations</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

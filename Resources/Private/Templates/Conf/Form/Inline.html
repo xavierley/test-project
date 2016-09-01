@@ -1,0 +1,31 @@
+<!-- ###SUBPART_CURRENT_TCATYPE### begin -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_INLINE### begin -->
+		<div>
+			<p>###FIELD### : </p>
+			<div class="form_inline" id="form__inline__###FIELD###"></div>
+		</div> 
+	<!-- ###SUBPART_CURRENT_TCATYPE_INLINE### end -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_IMAGE### begin -->
+		<p>###FIELD###(s) de la fiche</p>			
+		<f:form.hidden name="uidFiche" value="{fiche.uid}" id="uidFiche" />
+		<f:for each="{fiche.###FIELD###}" as="current###UCF_FIELD###" >
+			<div>
+				<f:image src="{current###UCF_FIELD###.originalResource.publicUrl}" additionalAttributes="{data-uid###FIELD###: current###UCF_FIELD###.uid}" />
+				<input type="button" class="removeImage" value="supprimer ###FIELD###" />
+			</div>
+		</f:for>
+		<div>
+			<f:form.upload name="fiche[###FIELD###instancier][file-1]" class="field_###FIELD###" />
+			<f:form.hidden name="fiche[###FIELD###]" value="" />
+			<div>
+				<p>titre de ###FIELD###</p>
+				<f:form.textfield name="fiche[###FIELD###instancier][file-1][additional][title]" id="field_###FIELD###_title" />
+				<p>description de ###FIELD###</p>
+				<f:form.textfield name="fiche[###FIELD###instancier][file-1][additional][description]" id="field_###FIELD###_description" />
+			</div>
+		</div>
+	<!-- ###SUBPART_CURRENT_TCATYPE_IMAGE### end -->
+ 
+<!-- ###SUBPART_CURRENT_TCATYPE### end -->

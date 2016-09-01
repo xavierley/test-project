@@ -1,0 +1,40 @@
+<f:layout name="Backend/Default" />
+
+<f:section name="content">
+	<div class="ConfTca">
+		<h1>Configuration des types d'annuaires et des champs qui leur sont associés</h1>
+		<f:form action="index" >
+			<div class="choixLocallang">
+				<h2>Configuration du locallang</h2>
+				<label for="locallangPath">Chemin du locallang utilisé.</label>
+				<input type="text" name="tx_eannuaires_web_eannuairesannuaires[locallangPath]" value="{locallangPath}" id="locallangPath" />
+				<input type="button" value="Enregistrer" id="saveLocallang" />
+			</div>
+			<br />
+			<div class="confTypes">
+				<h2>Configuration des types</h2>
+				<div class="listeTypes">
+					<ul>
+						<f:for each="{listTypes}" as="type" >
+							<f:render partial="Conf/DisplayType" arguments="{type:type}" />
+						</f:for>
+					</ul>
+				</div>
+				<div class="newType">
+					<label for="newTypeName">Nouveau type</label>
+					<input id="newTypeName" type="text" name="tx_eannuaires_web_eannuairesannuaires[newType]" value="" />
+					<input type="button" value="Enregistrer" id="saveNewType" />
+				</div>
+			</div>
+			<br />
+			<div class="listConf">
+				<h2>Configuration des champs</h2>
+				<f:for each="{listTypes}" as="type" >
+					<f:render partial="Conf/Type" arguments="{type:type, ListeChampBdd:ListeChampBdd}" />
+				</f:for>
+			</div>
+
+			<input type="button" value="Générer la conf" id="generateConf" />
+		</f:form>
+	</div>
+</f:section>

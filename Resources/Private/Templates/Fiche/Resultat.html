@@ -1,0 +1,109 @@
+{namespace annuaire=Emagineurs\EAnnuaires\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+	<f:flashMessages />
+
+	<f:if condition="{settings.pageBrowser}">
+	    <f:then>
+		    <p>Il y a <strong><f:count subject="{fiches}" /></strong> résultats pour votre recherche.<br/> 
+		    	<f:if condition="{searchObjet.titre}">
+		    		Votre recherche : <strong>"{searchObjet.titre}"</strong>; 
+		    	</f:if>
+		    	<f:if condition="{searchObjet.category}">
+		    		catégorie : <strong>"<f:cObject typoscriptObjectPath="lib.themeannuResult" data="{sourceUid: searchObjet.category}" />"</strong>
+		    	</f:if>
+    		</p>
+			<f:if condition="{settings.menu_abc}">
+				<ul>
+			        <f:for each="{annuaire:Abecedaire(list:fiches)}" as="lettre" iteration="itemIteration" >
+			            <li><f:format.htmlentitiesDecode>{lettre}</f:format.htmlentitiesDecode></li>
+			        </f:for>
+				</ul>
+			</f:if>
+
+			<f:for each="{annuaire:UsedLetters(list:fiches)}" as="currentLetter">
+			    <div id="{currentLetter}" class="letter" >
+                    <f:switch expression="{settings.templateLayoutResult}">
+                        <f:case value="30">
+                            <f:render partial="Fiche/ListLetterPersonne" arguments="{fiches:fiches, settings:settings, letter:currentLetter}" /><br />
+                        </f:case>
+                        <f:case value="40">
+                            <f:render partial="Fiche/ListLetterVideo" arguments="{fiches:fiches, settings:settings, letter:currentLetter}" /><br />
+                        </f:case>
+                        <f:case value="">
+							<f:render partial="Fiche/ListLetterPersonne" arguments="{fiches:fiches, settings:settings, letter:currentLetter}" /><br />
+                        </f:case>
+                    </f:switch>
+			    </div>
+			</f:for>
+
+			<f:render section="pagination" arguments="{currentPage:currentPage,countFiches:countFiches,nbPage:nbPage,page:page}" />
+	    </f:then>
+	    <f:else>
+		    <p>Il y a <strong><f:count subject="{fiches}" /></strong> résultats pour votre recherche.<br/> 
+		    	<f:if condition="{searchObjet.titre}">
+		    		Votre recherche : <strong>"{searchObjet.titre}"</strong>; 
+		    	</f:if>
+		    	<f:if condition="{searchObjet.category}">
+		    		catégorie : <strong>"<f:cObject typoscriptObjectPath="lib.themeannuResult" data="{sourceUid: searchObjet.category}" />"</strong>
+		    	</f:if>
+	    	</p>
+			<f:if condition="{settings.menu_abc}">
+				<ul>
+			        <f:for each="{annuaire:Abecedaire(list:fiches)}" as="lettre" iteration="itemIteration" >
+			            <li><f:format.htmlentitiesDecode>{lettre}</f:format.htmlentitiesDecode></li>
+			        </f:for>
+				</ul>
+			</f:if>
+			<f:for each="{annuaire:UsedLetters(list:fiches)}" as="currentLetter">
+			    <div id="{currentLetter}" class="letter" >
+                    <f:switch expression="{settings.templateLayoutResult}">
+                        <f:case value="30">
+                            <f:render partial="Fiche/ListLetterPersonne" arguments="{fiches:fiches, settings:settings, letter:currentLetter}" /><br />
+                        </f:case>
+                        <f:case value="40">
+                            <f:render partial="Fiche/ListLetterVideo" arguments="{fiches:fiches, settings:settings, letter:currentLetter}" /><br />
+                        </f:case>
+                        <f:case value="">
+							<f:render partial="Fiche/ListLetterPersonne" arguments="{fiches:fiches, settings:settings, letter:currentLetter}" /><br />
+                        </f:case>
+                    </f:switch>
+			    </div>
+			</f:for>
+	    </f:else>
+	</f:if>
+</f:section>
+
+<f:section name="pagination">
+	<div class="pagination_annuaire">
+        <span class="numpage">page {currentPage} sur 
+            <f:if condition="{f:count(subject:countFiches)} > 0">
+            	<f:then>
+            		<f:count subject="{countFiches}" />
+   			 	</f:then>
+   			 	<f:else>
+   			 		1
+   			 	</f:else>
+   			 </f:if>|
+			 </span>
+			 <span class="paginate_annuaire">
+            <f:for each="{countFiches}" as="Fiche" key="number" iteration="itemIteration">
+                <f:render partial="Fiche/paginate" arguments="{itemIteration:itemIteration, prevPage:prevPage, currentPage:currentPage}" />  
+            </f:for>  
+            <f:if condition="{nbPage} == {currentPage}">
+                <f:then></f:then>
+                <f:else>
+           			 <f:if condition="{nbPage} > 1">
+	                    <f:link.action arguments="{page:nextPage}">
+	                        Suivant
+  		            	</f:link.action>
+           			 </f:if>
+                </f:else>
+            </f:if>
+         </span>
+    </div>
+</f:section>
+

@@ -1,0 +1,61 @@
+<f:layout name="Default" />
+
+This template displays a EDIT form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Edit.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<f:form action="createLien" object="{lien}" name="lien" method="post" enctype="multipart/form-data" >
+	
+		<div class="submit_inline_form" data-table="lien" id="submit_inline_form_lien">
+			<f:if condition="{submittedLien}">
+				<ul>
+				<f:for each="{submittedLien}" as="currentLien" key="key" >
+					<li>{currentLien.titre} <input type="button" value="supprimer" id="remove-lien-{key}" class="removeInline" /></li>
+				</f:for>
+				</ul>
+			</f:if>
+		
+			<div>
+				<label for="field_lien_titre">titre : </label>
+				<f:form.textfield property="titre" id="field_lien_titre" class="inlineFormField" additionalAttributes="{data-field: 'titre'}" />
+			</div>
+			<div>
+				<label for="field_lien_url">url : </label>
+				<f:form.textfield property="url" id="field_lien_url" class="inlineFormField" additionalAttributes="{data-field: 'url'}" />
+			</div>
+			<div>
+				<p>Est un lien vers facebook :</p>
+				<div>
+					<label for="field_lien_isfacebook1">Oui</label>
+					<f:form.radio id="field_lien_isfacebook1" property="isFacebook" value="1" class="inlineFormField" additionalAttributes="{data-field: 'isFacebook'}" />
+				</div>
+				<div>
+					<label for="field_lien_isfacebook0">Non</label>
+					<f:form.radio id="field_lien_isfacebook0" property="isFacebook" value="0" class="inlineFormField" additionalAttributes="{data-field: 'isFacebook'}" />
+				</div>
+			</div>
+			<div>
+				<p>Est un lien vers twitter :</p>
+				<div>
+					<label for="field_lien_istwitter1">Oui</label>
+					<f:form.radio id="field_lien_istwitter1" property="isTwitter" value="1" class="inlineFormField" additionalAttributes="{data-field: 'isTwitter'}" />
+				</div>
+				<div>
+					<label for="field_lien_istwitter0">Non</label>
+					<f:form.radio id="field_lien_istwitter0" property="isTwitter" value="0" class="inlineFormField" additionalAttributes="{data-field: 'isTwitter'}" />
+				</div>
+			</div>
+			
+			<input type="button" value="Ajouter" class="submitButton" />
+		</div>
+	
+	</f:form>
+</f:section>

@@ -1,0 +1,381 @@
+<table class="tx-e-annuaires" >
+    <f:debug>{fiche}</f:debug>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.title" />
+            </td>
+            <td>
+                {fiche.title}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.name" />
+            </td>
+            <td>
+                {fiche.name}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.firstname" />
+            </td>
+            <td>
+                {fiche.firstname}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.address" />
+            </td>
+            <td>
+                {fiche.address}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.address2" />
+                ADRESSE2 :
+            </td>
+            <td>
+                {fiche.address2}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.zipcode" />
+            </td>
+            <td>
+                <f:for each="{fiche.city}" as="cityItem" iteration="iteration">
+                    {cityItem.codePostal} - 
+                </f:for> 
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.bp" />
+            </td>
+            <td>
+                {fiche.bp}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.country" />
+                COUNTRY : 
+            </td>
+            <td>
+                {fiche.country}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.cell" />
+            </td>
+            <td>
+                {fiche.cell}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.cedex" />
+                CEDEX :
+            </td>
+            <td>
+                {fiche.cedex}
+            </td>
+	</tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.fax" />
+                FAX :
+            </td>
+            <td>
+                {fiche.fax}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.phone" />
+            </td>
+            <td>
+                {fiche.phone}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.description" />
+            </td>
+            <td>
+                <f:format.html>{fiche.description}</f:format.html>
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.image" />
+            </td>
+            <td>
+                <f:for each="{fiche.image}" as="imageItem" >
+                    <f:image src="{imageItem.media.originalResource.publicUrl}" width="200" />
+                </f:for>
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.www" />
+            </td>
+            <td>
+                {fiche.www}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.email" />
+            </td>
+            <td>
+                {fiche.email}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.feuser" />
+            </td>
+            <td>
+                {fiche.feuser}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.civility" />
+            </td>
+            <td>
+                {fiche.civility}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.office" />
+            </td>
+            <td>
+                {fiche.office}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.categories" />
+                CATEGORIES :
+            </td>
+            <td>
+                <f:for each="{fiche.categories}" as="category" iteration="iteration">
+                    {category.title} - 
+                </f:for>  
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.city" />
+                CITY
+            </td>
+            <td>
+                <f:for each="{fiche.city}" as="cityItem" iteration="iteration">
+                    {cityItem.title} - 
+                </f:for>  
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.document" />
+                DOCUMENT :
+            </td>
+            <td>
+                <f:for each="{fiche.documents}" as="documentItem" >
+                    <f:link.external uri="{settings.siteUrl}{documentItem.fichier.originalResource.publicUrl}" target="_blank">TELECHARGER LE PDF</f:link.external>
+                </f:for>
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.district" />
+                DISTRICT :
+            </td>
+            <td>
+                <f:for each="{fiche.district}" as="districtItem" iteration="iteration">
+                    {districtItem.titre} - 
+                </f:for>
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.liens" />
+                LIENS :
+            </td>
+            <td>
+                <f:for each="{fiche.liens}" as="link" iteration="iteration">
+                    <f:link.page pageUid="{link.url}">{link.titre}</f:link.page><br /> 
+                </f:for>    
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.cantons" />
+                CANTONS :
+            </td>
+            <td>
+                Un canton est une fiche annuaires, donc tous les champs sont accessibles de la même façon que les champs affiché dans la vue détail en cours
+                <f:for each="{fiche.cantons}" as="cantonItem" iteration="iteration">
+                    {cantonItem.title} 
+                </f:for>    
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.commssion" />
+                COMMISSION :
+            </td>
+            <td>
+                <f:for each="{fiche.commission}" as="commissionItem" iteration="iteration">
+                    {commissionItem.titre} 
+                </f:for>  
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.actions" />
+                ACTIONS :
+            </td>
+            <td>
+                <f:for each="{fiche.actions}" as="actionsItem" iteration="iteration">
+                    {actionsItem.titre} 
+                </f:for>  
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.production" />
+                PRODUCTION :
+            </td>
+            <td>
+                {fiche.production}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.ouvert" />
+                OUVERT :
+            </td>
+            <td>
+                {fiche.ouvert}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.ouvertComment" />
+                OUVERT COMMENT :
+            </td>
+            <td>
+                {fiche.ouvertComment}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.beneficiaire" />
+                BENEFICIAIRE :
+            </td>
+            <td>
+                {fiche.beneficiaire}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.objet" />
+                OBJET :
+            </td>
+            <td>
+                <f:for each="{fiche.objet}" as="objetItem" iteration="iteration">
+                    {objetItem.titre} 
+                </f:for>    
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.enjeux" />
+                ENJEUX :
+            </td>
+            <td>
+                {fiche.enjeux}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.uploadImage" />
+                UPLOAD IMAGE
+            </td>
+            <td>
+                <f:for each="{fiche.uploadImage}" as="uploadImageItem" iteration="iteration">
+                    <f:image src="{uploadImageItem.media.originalResource.publicUrl}" width="200" />
+                </f:for>
+            </td>
+	</tr> 
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.contacts" />
+                CONTACTS :
+            </td>
+            <td>
+                <f:format.htmlentities>{fiche.contacts}</f:format.htmlentities>
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.linkContact" />
+                LINKCONTACT :
+            </td>
+            <td>
+                <f:link.page pageUid="{page.linkContact}">Lien vers le formulaire de contact</f:link.page>
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.hebergementTemp" />
+                HEBERGEMENT TEMPORAIRE :
+            </td>
+            <td>
+                {fiche.hebergementTemp}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.accueilJour" />
+                ACCUEIL DE JOUR :
+            </td>
+            <td>
+                {fiche.accueilJour}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.uniteTerritoriale" />
+                UNITE TERRITORIALE :
+            </td>
+            <td>
+                {fiche.uniteTerritoriale}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.cantonsTexte" />
+                CANTON (FORMAT TEXTE) :
+            </td>
+            <td>
+                {fiche.cantonsTexte}
+            </td>
+	</tr>
+	<tr>
+            <td>
+                <f:translate key="tx_eannuaires_domain_model_fiche.intercommunalite" />
+                INTERCOMMUNALITE :
+            </td>
+            <td>
+                {fiche.intercommunalite}
+            </td>
+	</tr>
+</table>

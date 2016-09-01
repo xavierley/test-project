@@ -1,0 +1,10 @@
+<f:link.action action="edit" >Créer une nouvelle fiche</f:link.action>
+<br />
+<ul>
+	<f:for each="{fiches}" as="currentFiche">
+		<li>
+			<f:link.action action="edit" arguments="{fiche:currentFiche.uid}" >{currentFiche.title}</f:link.action>
+			<f:link.action action="delete" arguments="{fiche:currentFiche.uid}" >Supprimer la fiche</f:link.action>
+		</li>
+	</f:for>
+</ul>

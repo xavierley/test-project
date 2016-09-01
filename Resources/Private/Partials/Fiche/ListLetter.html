@@ -1,0 +1,28 @@
+{namespace annuaire=Emagineurs\EAnnuaires\ViewHelpers}
+<f:for each="{fiches}" as="fiche" iteration="itemIteration"> 
+    <f:if condition="{annuaire:FirstLetter(fiche:fiche, lettre:letter)}">
+        <div class="display liste_annu">
+            <p class="titre_mis_en_avant"><f:link.action pageUid="{settings.detailPid}" action="show" arguments="{fiche : fiche}"> {fiche.title}</f:link.action></p>
+            <p>{fiche.address}
+            {fiche.address2}
+            <f:for each="{fiche.city}" as="cityItem">
+                {cityItem.codePostal}
+                {cityItem.title}
+            </f:for>
+            {fiche.bp}           
+            {fiche.cedex}</p>
+            <f:render partial="Fiche/City" arguments="{fiches:fiches}" />
+            <f:if condition="{fiche.email}">
+            	<div>Courriel : <strong><a href="mailto:{fiche.email}"> {fiche.email}</a></strong></div>
+            </f:if>
+            <f:if condition="{fiche.phone}">
+            	<p>Tél : {fiche.phone}</p>
+            </f:if>
+            <div class="lien_geoloc">
+                <f:if condition="{f:cObject(typoscriptObjectPath:'lib.isAnnuaireGeoloc', data:'{sourceUid: fiche.uid}')}" >
+				    <f:cObject typoscriptObjectPath="lib.paramPoiAnnuaire" data="{sourceUid: fiche.uid, pageMap: settings.idmap}" />
+                </f:if>
+			</div>
+        </div>
+    </f:if>
+</f:for>    

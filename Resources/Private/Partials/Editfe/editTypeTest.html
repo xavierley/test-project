@@ -1,0 +1,165 @@
+{namespace em=Emagineurs\EAnnuaires\ViewHelpers}
+<f:form 
+	action="create" 
+	additionalParams="{no_cache: 1}" 
+	object="{fiche}" 
+	name="fiche" 
+	method="post" 
+	enctype="multipart/form-data" 
+	id="edit_annuaire_fe"
+	onsubmit="rteMove1();"
+>
+	<div>
+		<label for="field_title">title : *</label>
+		<f:form.textfield property="title" id="field_title" />
+	</div>
+	<hr />
+	<hr />
+  
+		<div>
+			<label for="field_description" >description : *</label>
+			< em:Rte valueRTE="{fiche.description}" champ="description" tsConfigPath="<f:cObject typoscriptObjectPath='lib.baseUrlAnnuaire' />/typoscript/tsconfig/rte.txt" rteNumber="RTEObj1" numRTE="1" />
+		</div>
+	<hr />
+	<hr />
+	<div>
+		<p>upload image : *</p>
+		<div class="form_inline" id="form__inline__uploadimage"></div>
+	</div>
+	<hr />
+	<hr />
+	
+	
+	<p>Image(s) de la fiche</p>			
+	<f:form.hidden name="uidFiche" value="{fiche.uid}" id="uidFiche" />
+	<f:for each="{fiche.image}" as="currentImage" >
+		<div>
+			<f:image src="{currentImage.originalResource.publicUrl}" additionalAttributes="{data-uidimage: currentImage.uid}" />
+			<input type="button" class="removeImage" value="supprimer cette image" />
+		</div>
+	</f:for>
+	<div>
+		<f:form.upload name="fiche[imageinstancier][file-1]" class="field_image" />
+		<f:form.hidden name="fiche[image]" value="" />
+		<div>
+			<p>titre de l'image</p>
+			<f:form.textfield name="fiche[imageinstancier][file-1][additional][title]" id="field_image_title" />
+			<p>description de l'image</p>
+			<f:form.textfield name="fiche[imageinstancier][file-1][additional][description]" id="field_image_description" />
+		</div>
+	</div>
+	
+	<hr />
+	<hr />
+	
+	
+	<p>Image(s) 2 de la fiche</p>			
+	<f:form.hidden name="uidFiche" value="{fiche.uid}" id="uidFiche" />
+	<f:for each="{fiche.media}" as="currentMedia" >
+		<div>
+			<f:image src="{currentMedia.originalResource.publicUrl}" additionalAttributes="{data-uidimage: currentMedia.uid}" />
+			<input type="button" class="removeImage" value="supprimer cette image" />
+		</div>
+	</f:for>
+	<div>
+		<f:form.upload name="fiche[mediainstancier][file-1]" class="field_image" />
+		<f:form.hidden name="fiche[media]" value="" />
+		<div>
+			<p>titre de l'image</p>
+			<f:form.textfield name="fiche[mediainstancier][file-1][additional][title]" id="field_media_title" />
+			<p>description de l'image</p>
+			<f:form.textfield name="fiche[mediainstancier][file-1][additional][description]" id="field_media_description" />
+		</div>
+	</div>
+	
+	<hr />
+	<div>
+		<p>Documents : *</p>
+		<f:if condition="{fiche.documents}">
+			<f:for each="{fiche.documents}" as="currentDocument" >
+				<f:for each="{currentDocument.fichier}" as="currentFile" >
+					<div>
+						<f:image src="{currentFile.originalResource.publicUrl}" width="150c" additionalAttributes="{data-uidimage: currentFile.uid, data-uidinline: currentDocument.uid, data-type: 'documents'}"  />
+						<input type="button" class="removeInlineImage" value="supprimer ce fichier" />
+					</div>
+				</f:for>
+			</f:for>
+		</f:if>
+		<div class="form_inline" id="form__inline__documents"></div>
+	</div>
+	<hr />
+	<hr />
+	<div>
+		<p>liens : *</p>
+		<div class="form_inline" id="form__inline__lien"></div>
+	</div>
+	<hr />
+	<hr />
+	<div>
+		<p>mandat : *</p>
+		<div class="form_inline" id="form__inline__mandat"></div>
+	</div>
+	<hr />
+	<hr />
+
+	<div>
+		Categories :
+		<f:for each="{datas.arrayCategories}" as="currentItem" iteration="itemIteration" key="key" >
+			<label for="check_categories_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="categories" value="{key}" id="check_categories_{itemIteration.cycle}" />
+		</f:for>
+	</div>
+
+	<div>
+		Canton :
+		<f:for each="{datas.arrayCanton}" as="currentItem" iteration="itemIteration" key="key" >
+			<label for="check_canton_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="canton" value="{key}" id="check_canton_{itemIteration.cycle}" />
+		</f:for>
+	</div>
+	
+	<div>
+		<p>accueiljour :</p>
+		<div>
+			<label for="field_accueiljour">Oui</label>
+			<f:form.radio id="field_accueiljour1" property="accueiljour" value="1" />
+		</div>
+		<div>
+			<label for="createNewsAccessible0">Non</label>
+			<f:form.radio id="field_accueiljour0" property="accueiljour" value="0" />
+		</div>
+	</div>
+
+	<div>
+		Actions :
+		<f:for each="{datas.arrayActions}" as="currentItem" key="key" iteration="itemIteration" >
+			<label for="check_actions_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="actions" value="{key}" id="check_actions_{itemIteration.cycle}" />
+			<f:comment><f:form.checkbox property="category" value="{uidCat}" id="check_actions_{itemIteration.cycle}" multiple="1" /></f:comment>
+		</f:for>
+	</div>
+
+	<div>
+		<label for="field_beneficiaire" >beneficiaire : *</label>
+		<f:form.Textarea property="beneficiaire" id="field_beneficiaire"></f:form.Textarea>
+			{fiche.beneficiaire}
+	</div>
+	
+	<div>
+		<label for="field_contrat">Contrat *</label>
+		<f:form.select property="contrat" options="{datas.arrayContrat}" id="field_contrat" />
+	</div>
+
+	<div>
+		<label for="field_datefiche" >datefiche : *</label>
+		<f:form.textfield property="datefiche" value="{f:format.date(format:'%d-%m-%Y', date: fiche.datefiche)}" id="field_datefiche" />
+	</div>
+
+	<div>
+		<label for="field_civility">Civility *</label>
+		<f:form.select property="civility" options="{datas.arrayCivility}" id="field_civility" />
+	</div>
+		
+	<f:form.submit value="Proposer ma fiche" name="submit" />
+	<f:form.submit value="Sauvegarder mon brouillon" name="save" />
+</f:form>

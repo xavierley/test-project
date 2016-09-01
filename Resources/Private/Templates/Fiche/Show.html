@@ -1,0 +1,35 @@
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+	<f:flashMessages />
+
+	<f:comment>
+		<f:render partial="Fiche/tousLesChamps" arguments="{fiche:fiche}" />
+	</f:comment>
+
+	<f:switch expression="{settings.templateLayoutDetail}">
+		<f:comment>Annuaire des peronnes</f:comment>
+		<f:case value="30">
+			<f:render partial="Fiche/Personne" arguments="{fiche:fiche, settings:settings, datas: '{_all}'}" />
+		</f:case>
+		<f:comment>Galerie vidéo</f:comment>
+		<f:case value="40">
+			<f:render partial="Fiche/Video" arguments="{fiche:fiche, settings:settings, datas: '{_all}'}" />
+		</f:case>
+		<f:case value="">
+			<f:render partial="Fiche/Properties" arguments="{fiche:fiche}" />
+		</f:case>
+	</f:switch>
+</f:section>

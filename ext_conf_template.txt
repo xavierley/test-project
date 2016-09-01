@@ -1,0 +1,17 @@
+# cat=basic; type=string; label=LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:ext_conf_types
+types = 1-Lieu,2-Personne
+
+# cat=basic; type=user[EXT:e_annuaires/Classes/Hooks/class.userConfType.php:userConfType->makeTypeArray]; label=test label;
+confType = 
+
+# cat=basic; type=number; label=LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:typeCanton
+typeCanton = 
+
+# cat=basic; type=number; label=Type à afficher dans les commissions
+typeCommission = 
+
+# cat=basic; type=string; label=LLL:EXT:e_annuaires/Resources/Private/Language/locallang_be.xml:sortingFields
+sortingFields = name
+
+# cat=basic; type=string; label=Types de medias
+typedisplay = image,pdf

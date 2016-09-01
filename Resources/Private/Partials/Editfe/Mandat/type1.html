@@ -1,0 +1,41 @@
+<div>
+	<p>typemandat : </p>
+	<f:form.select property="typemandat" id="field_mandat_type" options="{typemandat}" class="inlineFormField" />
+</div>
+<div>
+	<p>canton : </p>
+	<f:for each="{canton}" as="currentItem" iteration="itemIteration" key="key" >
+		<label for="check_canton_{itemIteration.cycle}">{currentItem}</label>
+		<f:form.checkbox multiple="1" property="canton" value="{key}" id="check_canton_{itemIteration.cycle}" class="inlineFormField" />
+	</f:for>
+</div>
+<div>
+	<p>fonctions : </p>
+	<f:for each="{fonctions}" as="currentItem" iteration="itemIteration" key="key" >
+		<label for="check_fonctions_{itemIteration.cycle}">{currentItem}</label>
+		<f:form.checkbox multiple="1" property="fonctions" value="{key}" id="check_fonctions_{itemIteration.cycle}" class="inlineFormField" />
+	</f:for>
+</div>
+<div>
+	<label for="field_mandat_fonctionautre">delegation : </label>
+	<f:form.textfield property="delegation" id="field_mandat_delegation" class="inlineFormField" />
+</div>
+<div>
+	<label for="field_mandat_fonctionautre">fonctionautre : </label>
+	<f:form.textfield property="fonctionautre" id="field_mandat_fonctionautre" class="inlineFormField" />
+</div>
+<div>
+	<p>groupepolitique : </p>
+	<f:for each="{groupepolitique}" as="currentItem" iteration="itemIteration" key="key" >
+		<label for="check_groupepolitique_{itemIteration.cycle}">{currentItem}</label>
+		<f:form.checkbox multiple="1" property="groupepolitique" value="{key}" id="check_groupepolitique_{itemIteration.cycle}" class="inlineFormField" />
+	</f:for>
+</div>
+<div>
+	<label for="field_mandat_commissions" >commissions : *</label>
+	<f:form.textarea property="{commissions}" id="field_mandat_commissions"></f:form.textarea>
+</div>
+<div>
+	<label for="field_mandat_representations" >representations : *</label>
+	<f:form.textarea property="{representations}" id="field_mandat_representations"></f:form.textarea>
+</div>

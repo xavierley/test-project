@@ -1,0 +1,53 @@
+<f:switch expression="{source}">
+	<f:case value="form">
+		<h2>Choisissez et triez les champs qui doivent apparaitre dans le formulaire : </h2>
+		<div class="formConf" >
+			<f:for each="{selectedFields}" as="currentField" iteration="itemIteration" >
+				<div class="fieldConf" id="field-{itemIteration.index}" >
+					<div class="firstLineConf" data-fieldname="{currentField.title}" >
+						<h4>
+							{currentField.title}
+							<img class="fieldDisabled" width="16" height="16" src="/typo3/sysext/core/Resources/Public/Icons/T3Icons/overlay/overlay-hidden.svg" />
+						</h4>
+						<div class="buttonConf">
+							<span class="moveup">
+								<img width="16" height="16" src="/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-move-up.svg" />
+							</span>
+							<span class="movedown">
+								<img width="16" height="16" src="/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-move-down.svg" />
+							</span>
+							<span class="showField">
+								<img width="16" height="16" src="/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-edit-hide.svg" />
+							</span>
+							<span class="hideField">
+								<img width="16" height="16" src="/typo3/sysext/core/Resources/Public/Icons/T3Icons/actions/actions-edit-unhide.svg" />
+							</span>
+						</div>
+					</div>
+				</div>
+			</f:for>
+		</div>
+		<br />
+		<f:form.button value="{type.uid}" name="typeAnnuaires" class="generateTemplateButton" >Générer le template</f:form.button>
+	</f:case>
+	<f:case value="tca">
+		<f:for each="{selectedFields}" as="currentField" >
+			<div class="fieldConf" >
+				<div class="firstLineConf" >
+					<h4>{currentField.title}</h4>
+					<f:image src="EXT:e_annuaires/Resources/Public/Icons/fleche_haut.png" id="decreaseSorting-{currentField.uid}" class="decreaseSorting" />
+					<f:image src="EXT:e_annuaires/Resources/Public/Icons/fleche_bas.png" id="increaseSorting-{currentField.uid}" class="increaseSorting" />
+					<f:image src="EXT:e_annuaires/Resources/Public/Icons/poubelle.gif" id="deleteChamp-{currentField.uid}" class="deleteChamp" />
+				</div>
+				<div class="secondLineConf" >
+					<label for="newLabel{currentField.uid}">Nouveau label du champ</label>
+					<input type="text" id="newLabel-{currentField.uid}" value="{currentField.label}" />
+				</div>
+				<div class="thirdLineConf" >
+					<label for="newTab{currentField.uid}">Label du nouvel onglet</label>
+					<input type="text" id="newTab-{currentField.uid}" value="{currentField.tabLabel}" />
+				</div>
+			</div>
+		</f:for>
+	</f:case>
+</f:switch>

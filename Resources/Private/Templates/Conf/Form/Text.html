@@ -1,0 +1,16 @@
+<!-- ###SUBPART_CURRENT_TCATYPE### begin -->
+
+	<!-- ###SUBPART_CURRENT_TCATYPE_WITHRTE### begin -->
+		<label for="field_###FIELD###" >###FIELD### : *</label>
+		<em:Rte valueRTE="{fiche.###FIELD###}" nameRte="bodytext" namePrefix="tx_eannuaires_pi1[rte]" rteNumber="RTEObj1" numRTE="1" />
+		<em:Rte valueRTE="{fiche.###FIELD###}" champ="###FIELD###" tsConfigPath="<f:cObject typoscriptObjectPath='lib.baseUrlAnnuaire' />/typoscript/tsconfig/rte.txt" rteNumber="RTEObj1" numRTE="1" />
+	<!-- ###SUBPART_CURRENT_TCATYPE_WITHRTE### end -->
+
+	<!-- ###SUBPART_CURRENT_TCATYPE_WITHOUTRTE### begin -->
+		<label for="field_###FIELD###" >###FIELD### : *</label>
+		<f:form.textarea property="{###FIELD###}" id="field_###FIELD###">
+			{fiche.###FIELD###}
+		</f:form.textarea>
+	<!-- ###SUBPART_CURRENT_TCATYPE_WITHOUTRTE### end -->
+
+<!-- ###SUBPART_CURRENT_TCATYPE### end -->

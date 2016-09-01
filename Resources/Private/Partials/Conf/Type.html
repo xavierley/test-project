@@ -1,0 +1,24 @@
+<div class="confTypeNum{type.uid}">
+	<h3>{type.title}</h3>
+	<div class="contenuChamp">
+		<div class="confTypeCourant">
+			<div class="itemTypeCourant" id="confTypeNum-{type.uid}">
+			<!-- contenu généré en AJAX -->
+			<!--
+				Dans l'idée, appelé une action qui afficherait toutes les infos sur les champs du types. On gérerait donc l'affichage du bloc dans un autre template.
+				l'action évoqué renverrait un tableau ou un storageObject avec les objets correspondant aux enregistrement pour le type passé en paramètre
+			-->
+			</div>
+		</div>
+		<div class="ListeChampBdd">
+			<select name="tx_eannuaires_web_eannuairesannuaires[ListeChampBdd]" multiple="multiple" size="20" id="selectChamp-{type.uid}" >
+				<f:for each="{ListeChampBdd}" as="champ" >
+					<option value="{champ.title}">{champ.title} -- <strong>{champ.config.type}</strong></option>
+					<option class="displayConf" value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; voir la conf >></option>
+				</f:for>
+			</select>
+			<div class="infoChamp {champ.title}"><!-- ajouté requete AJAX au survol qui affiche un template avec juste un f:debug de {champ} --></div>
+		</div>
+	</div>
+	<input type="button" value="Enregistrer les labels des champs de ce type" class="saveConf" id="saveConf-{type.uid}" />
+</div>

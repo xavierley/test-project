@@ -1,0 +1,152 @@
+/***********************************************************************************/
+/************************************* CONF TCA ************************************/
+/***********************************************************************************/
+.confTypes {
+	width:100%;
+	float:left;
+}
+.confTypes > div{
+	float:left;
+	margin:10px 20px;
+}
+.listeTypes ul{
+	float:left;
+	width:100%;
+	padding: 0;
+	margin: 0;
+}
+.listeTypes li {
+	float:left;
+	clear:both;
+	list-style-type:none;
+}
+.listeTypes li > div{
+	float:left;
+	margin:0 5px;
+}
+.listeTypes li > div+div{
+	position: relative;
+	top: 6px;
+}
+.listeTypes li > div+div+div{
+	top: 4px;
+}
+.firstLineConf > *{
+	float: left;
+	margin: 0 5px;
+}
+.listConf {
+	float: left;
+	width: 100%;
+}
+.listConf h3{
+	margin: 0 0 10px;
+}
+.listConf > div {
+	float: left;
+	width:96%;
+	margin: 0 0 15px;
+	border: dotted 1px black;
+	padding: 2%;
+}
+.listConf > div > input[type=button]{
+	clear:both;
+	float: left;
+}
+.fieldConf > div {
+	float: left;
+	width:100%;
+	margin:0 0 8px;
+}
+.confTypeCourant{
+	float:left;
+	margin:0 30px 0 0;
+	max-width:40%;
+}
+.ListeChampBdd{
+	float:left;
+	width:55%;
+}
+.infoChamp{
+	float:left;
+	width: 80%;
+}
+.titreConf{
+	margin:8px 0;
+	width:100%;
+}
+.ListeChampBdd select{
+	float:left;
+	width: 80%;
+}
+.contenuChamp{
+	float:left;
+	width:100%;
+}
+.fieldConf{
+	float: left;
+	width: 100%;
+	border-top: dotted 1px black;
+	padding: 10px 0;
+}
+.fieldConf h4{
+	margin:0;
+}
+.increaseSorting,
+.decreaseSorting{
+	position:relative;
+	top:2px;
+}
+/***********************************************************************************/
+/************************************ CONF FORM ************************************/
+/***********************************************************************************/
+.typeButton{
+   display: inline-block;
+    margin: 0 10px 0 0;
+    min-height: 35px;
+    min-width: 60px;
+}
+.formConf {
+    border: 1px solid #000;
+    display: inline-block;
+    margin: 20px 0;
+	width: 700px;
+}
+.formConf .firstLineConf {
+	padding:10px 10px 0;
+}
+.buttonConf {
+    margin: -7px 0 0 40px;
+	position: relative;
+}
+.buttonConf > span{
+	background-color: #dedede;
+	border: 1px solid #c4c4c4;
+	float:left;
+	padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+.formConf .fieldConf h4{
+	position:relative;
+}
+.formConf .fieldConf > div{
+	margin: 0 0 5px;
+}
+.fieldDisabled{
+	position:absolute;
+    right: -15px;
+    top: 10px;
+}
+.hideField{
+	position: absolute;
+    right: 0;
+	display:none;
+}
+.fieldDisabled{
+	display:none;
+}
+.movedown,
+.moveup{
+	cursor:pointer;
+}

@@ -1,0 +1,45 @@
+16-08-16 Xavier Ley <xley@e-magineurs.com>
+	
+	* Passage en version 0.3.1
+	
+	* Modification de l'abécédaire sur la base des amélioration apportés pour la charente (amélioration des temps de réponse)
+
+29-01-16 Xavier Ley <xley@e-magineurs.com>
+	
+	* Passage en version 0.3.0
+	
+	* Compatiblité avec typo3 v7
+	
+	* Ajout dans les options par défaut de la webtv
+	
+	* Ajout d'une fonctionnalité d'édition frontend des fiches + création d'un module afin de généré le template associé
+	
+	* Divers correction de bugs
+	
+	* Suppression de la dépendance à e_lib
+	
+09-10-15 Xavier Ley <xley@e-magineurs.com>
+	
+	* Passage en version 0.2.2 : Ajout de hooks (signal slots) dans l'extension
+	
+29-05-15 Xavier Ley <xley@e-magineurs.com>
+	
+	* Passage en version 0.2.1 : Merge des différentes versions afin de n'en avoir qu'une seule bien à jour intégrant toutes les corrections et modifications.
+
+29-05-15 Xavier Ley <xley@e-magineurs.com>
+	
+	* Passage en version 0.2.0
+	
+	* Ajout d'un module pour la configuration des champs (à la place de la conf de l'extension manager), le module permet :
+		- la gestion des confs des champs de façon plus ergonomique
+		- le choix du locallang pour la redéfinition des labels
+		- un système d'import/export des conf (pour les pasasges en prod notamment)
+		- d'un système de génération automatique de la conf à partir de l'ancien système
+	
+	* Ajout d'un select sur les types d'annuaires dans les pages (onglet comportement, avant la tsconfig), ce champ permet :
+		- de remplacer la tsconfig "annuaires.type = uidAnnuaire" qui permettait l'affichage des bons noms de champs en vue liste en be
+		- la génération automatique du tsconfig "TCADefaults.tx_eannuaires_domain_model_fiche.typeelement = uidType" qui permet d'attribuer automatiquement le bon type aux enregistrement du dossier
+	
+	* Suppression de la limite en dur de 5 elements en frontend si rien n'ést indiqué
+	
+	* Création du changelog

@@ -1,0 +1,55 @@
+<!-- ###SUBPART_CURRENT_TCATYPE### begin -->
+
+	<!-- TEMPLATES DES SELECT "SIMPLE" -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_SINGLE_RAW### begin -->
+		<label for="field_###FIELD###">###UCF_FIELD###</label>
+		<f:form.select property="###FIELD###" options="{array###UCF_FIELD###}" id="field_###FIELD###" />
+	<!-- ###SUBPART_CURRENT_TCATYPE_SINGLE_RAW### end -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_SINGLE_STORAGE### begin -->
+		<label for="field_###FIELD###">###UCF_FIELD###</label>
+		<f:form.select property="###FIELD###.0" options="{array###UCF_FIELD###}" id="field_###FIELD###" optionValueField="uid" />
+	<!-- ###SUBPART_CURRENT_TCATYPE_SINGLE_STORAGE### end -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_SINGLE_OBJECT### begin -->
+		<label for="field_###FIELD###">###UCF_FIELD###</label>
+		<f:form.select property="###FIELD###" options="{array###UCF_FIELD###}" id="field_###FIELD###" optionValueField="uid" />
+	<!-- ###SUBPART_CURRENT_TCATYPE_SINGLE_OBJECT### end -->
+		
+	
+	<!-- TEMPLATES DES SELECT "MULTIPLE" -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_RAW### begin -->
+		###UCF_FIELD### :
+		<f:for each="{array###UCF_FIELD###}" as="currentItem" iteration="itemIteration" key="key" >
+			<label for="check_###FIELD###_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="###FIELD###" value="{key}" id="check_###FIELD###_{itemIteration.cycle}" />
+		</f:for>
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_RAW### end -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_STORAGE### begin -->
+		###UCF_FIELD### :
+		<f:for each="{array###UCF_FIELD###}" as="currentItem" iteration="itemIteration" key="key" >
+			<label for="check_###FIELD###_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="###FIELD###" value="{key}" id="check_###FIELD###_{itemIteration.cycle}" />
+		</f:for>
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_STORAGE### end -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_OBJECT### begin -->
+		###UCF_FIELD### :
+		<f:for each="{array###UCF_FIELD###}" as="currentItem" iteration="itemIteration" key="key" >
+			<label for="check_###FIELD###_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="###FIELD###" value="{key}" id="check_###FIELD###_{itemIteration.cycle}" />
+		</f:for>
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_OBJECT### end -->
+	
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_CATEGORY### begin -->
+		###UCF_FIELD### :
+		<f:for each="{array###UCF_FIELD###}" as="currentItem" iteration="itemIteration" key="key" >
+			<label for="check_###FIELD###_{itemIteration.cycle}">{currentItem}</label>
+			<f:form.checkbox multiple="1" property="###FIELD###" value="{key}" id="check_###FIELD###_{itemIteration.cycle}" />
+		</f:for>
+	<!-- ###SUBPART_CURRENT_TCATYPE_MULTIPLE_CATEGORY### end -->
+	
+<!-- ###SUBPART_CURRENT_TCATYPE### end -->

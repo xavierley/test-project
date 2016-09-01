@@ -1,0 +1,26 @@
+plugin.tx_eannuaires {
+	view {
+		# cat=plugin.tx_eannuaires/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:e_annuaires/Resources/Private/Templates/
+		# cat=plugin.tx_eannuaires/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:e_annuaires/Resources/Private/Partials/
+		# cat=plugin.tx_eannuaires/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:e_annuaires/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_eannuaires//a; type=string; label=Default storage PID
+		storagePid =
+	}
+	settings {
+		test = 1
+
+		# cat=plugin.tx_eannuaires/;  type=text; label= Largeur du lecteur
+		largeurLecteur = 470
+
+		# cat=plugin.tx_eannuaires/;  type=text; label= Hauteur du lecteur
+		hauteurLecteur = 320
+
+		# cat=plugin.tx_eannuaires/;  type=text; label= chemin du mini lecteur
+		miniLecteur = typo3conf/ext/e_annuaires/Resources/Public/Flash/player.swf
+	}
+}

@@ -1,0 +1,35 @@
+{namespace annuaire=Emagineurs\EAnnuaires\ViewHelpers}
+
+<f:for each="{fiches}" as="fiche" iteration="itemIteration"> 
+    <f:if condition="{annuaire:FirstLetter(fiche:fiche, lettre:letter, complete:1)}">
+        <f:then>
+            <f:render section="content" arguments="{fiche:fiche}" />
+        </f:then>
+        <f:else>
+            <f:render section="content" arguments="{fiche:fiche}" />
+        </f:else>
+    </f:if>
+</f:for>
+   
+<f:section name="content">
+    <div class="display liste_annu">
+        <div class="image_annuaire_personne"> 
+            <f:for each="{fiche.image}" as="imageItem" >
+                <f:media file="{imageItem}" height="120" width="90c" />
+            </f:for>
+        </div>
+        <div class="info_annuaire_personne">  
+            <p><strong>{fiche.title} {fiche.firstname}</strong></p> 
+            <f:if condition="{fiche.cantonstexte}">
+                <p><strong>Fonction :</strong> {fiche.cantonstexte}</p>
+            </f:if>
+            <f:if condition="{fiche.email}">
+                <p><strong>Courriel :</strong> <f:link.email email="{fiche.email}" /></p>
+            </f:if>
+            <f:if condition="{fiche.phone}">
+                <p><strong>Tél :</strong> {fiche.phone}</p>
+            </f:if>
+            <f:link.action pageUid="{settings.detailPid}" action="show" arguments="{fiche : fiche}">En savoir plus</f:link.action>
+        </div>
+    </div>
+</f:section>

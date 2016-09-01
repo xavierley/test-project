@@ -1,0 +1,13 @@
+{namespace em=Emagineurs\EAnnuaires\ViewHelpers}
+<f:form 
+	action="create" 
+	object="{fiche}" 
+	name="fiche" 
+	method="post" 
+	enctype="multipart/form-data" 
+	onsubmit="rteMove1();"
+>
+||
+	<f:form.submit value="Proposer ma fiche" name="submit" />
+	<f:form.submit value="Sauvegarder mon brouillon" name="save" />
+</f:form>

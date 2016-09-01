@@ -1,0 +1,25 @@
+<f:layout name="Backend/Default" />
+
+<f:section name="content">
+	<h1>Génération du template de la création frontend de fiche annuaire</h1>
+	<div class="ConfForm">
+		<div class="listType">
+			<h2>Choisissez le type d'annuaire :</h2>
+			<f:for each="{types}" as="type">
+				<f:form.button value="{type.uid}" name="typeAnnuaires" class="typeButton" >{type.title}</f:form.button>
+			</f:for>
+		</div>
+		
+		<div class="currentTypeConf">
+			<!-- Généré en AJAX, contient les champs a affiché dans le formulaire -->
+		</div>
+		<div class="listeFields">
+			<!-- Liste des champs disponible pour le type en cours (permet de remetter dans la liste un champ supprimer) -->
+		</div>
+		<div class="listeFields">
+			<h2>Titre à déplacer par la suite : Template du formulaire configuré</h2>
+			<p>Copier le template fluid ci-dessous dans le partial approprié :</p>
+			<textarea rows="15" cols="95" id="finalTemplate">Template fluid correspondant au formulaire configuré</textarea>
+		</div>
+	</div>
+</f:section>

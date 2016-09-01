@@ -1,0 +1,43 @@
+<f:layout name="Default" />
+
+This template displays a EDIT form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Edit.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<div class="submit_inline_form" id="submit_inline_form_action">
+		<f:if condition="{submittedAction}">
+			<ul>
+			<f:for each="{submittedAction}" as="currentAction" key="key" iteration="actionIteration" >
+				<li>i{currentAction.titre} <input type="button" value="supprimer" id="remove-image-{key}" class="removeInline" /></li>
+			</f:for>
+			</ul>
+		</f:if>
+		
+		<div>
+			<label for="field_lien_titre">titre : </label>
+			<f:form.textfield name="tx_eannuaires_pi1[image][titre]" id="field_lien_titre" class="inlineFormField" additionalAttributes="{data-field: 'titre'}" />
+		</div>
+		
+		<div>
+			<f:form.upload name="tx_eannuaires_pi1[image][image]" id="mediaFile" class="inlineFormField inlineFormFieldImage" />
+			<input type="button" value="Ajouter image" class="submitButtonFal" />
+		</div>
+		
+		<input type="button" value="Ajouter" class="submitButton" />
+		<!-- <input type="submit" value="Ajouter" class="submitButton" name="submitImage" /> -->
+	</div>	
+
+<f:comment>		
+	<f:form action="createImage" object="{image}" name="image" method="post" enctype="multipart/form-data" class="formWithFal" id="testImage" >
+	</f:form>
+</f:comment>		
+	
+</f:section>

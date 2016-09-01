@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for backend of news</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="flexforms_tab.settings">Paramètre</label>
+			<label index="flexforms_general.mode">Vue</label>
+			<label index="flexforms_general.mode.standard">Vues standard</label>
+			<label index="flexforms_general.mode.e_annuaires_show">Détail</label>
+			<label index="flexforms_general.mode.e_annuaires_listOnly">Liste</label>
+			<label index="flexforms_general.mode.e_annuaires_detail">Détail</label>
+			<label index="flexforms_general.mode.e_annuaires_catmenu">Menu des catégories</label>
+			<label index="flexforms_general.mode.e_annuaires_recherche">Recherche</label>
+			<label index="flexforms_general.mode.e_annuaires_resultat">Résultat</label>
+			<label index="flexforms_general.mode.e_annuaires_update">Modification</label>
+			<label index="flexforms_general.mode.e_annuaires_new">Gestion des fiches</label>
+			<label index="flexforms_general.mode.search">Moteur de recherche</label>
+			<label index="flexforms_general.mode.form">Formulaire frontend</label>
+			<label index="flexforms_general.mode.send_mail">Envoi d'email</label>
+			<label index="flexforms_template.templateLayoutListe">Templates pour la vue liste</label>
+			<label index="flexforms_template.templateLayoutDetail">Templates pour la vue détail</label>
+			<label index="flexforms_template.templateLayoutCatmenu">Templates pour la vue menu des catégories</label>
+			<label index="flexforms_template.templateLayoutSearch">Templates pour la vue formulaire de recherche</label>
+			<label index="flexforms_template.templateLayoutResult">Templates pour la vue resultats de la recherche</label>
+			<label index="flexforms_template.templateLayoutManage">Templates pour la vue gestion des fiches</label>
+			<label index="flexforms_template.templateLayoutEdit">Templates pour la vue édition de fiche annuaire en fe</label>
+			<label index="flexforms_general.orderBy">Trier par</label>
+			<label index="flexforms_general.orderBy.tstamp">Date de modification</label>
+			<label index="flexforms_general.orderBy.crdate">Date de création</label>
+			<label index="flexforms_general.orderBy.sorting">Ordre du backend</label>
+			<label index="flexforms_general.orderBy.title">Titre</label>
+			<label index="flexforms_general.whichMember">Selection Membre</label>
+			<label index="flexforms_general.categories">Selection Catégorie</label>
+			<label index="flexforms_general.whichCommune">Selection Ville</label>
+			<label index="flexforms_general.whichDistrict">Selection Quartier</label>
+			<label index="flexforms_tab.filter">Filtres</label>
+			<label index="flexforms_tab.additional">Parametrage du plugin</label>
+			<label index="flexforms_additional.detailPid">Page détail</label>
+			<label index="flexforms_additional.listPid">Page liste</label>
+			<label index="flexforms_additional.resultPid">Page resultat de recherche</label>
+			<label index="flexforms_additional.ordre">Ordre</label>
+			<label index="flexforms_additional.ordre.asc">Croissant</label>
+			<label index="flexforms_additional.ordre.desc">Décroissant</label>
+			<label index="flexforms_additional.menu_abc">Affichage de l'abécédaire </label>
+			<label index="flexforms_additional.latest">Nombre d'item en mode liste</label>
+			<label index="flexforms_additional.pageBrowser">Activer la pagination</label>
+			<label index="flexforms_tab.template">Configuration avancée</label>
+			<label index="flexforms_template.template">Template</label>
+			<label index="coord">Coordonnées</label>
+			<label index="doc">Documents rattachés</label>
+			<label index="cat">Catégories</label>
+			<label index="tabs.access">Acces</label>
+			<label index="ext_conf_types">Liste des types d'annuaires(1-nomType1,2-nomType2,3-nomType3 pas d'espace apres les virgules)</label>
+			<label index="sortingFields">Champs de tri à ajouté au flexform :</label>
+			<label index="typeCanton">Id du type "Canton"</label>
+			<label index="flexforms_filter.type">Type d'annuaire : </label>
+			<label index="flexforms_general.catAndOr">Affichage des catégorie si :</label>
+			<label index="flexforms_general.catAndOr.1">Une des catégorie de la fiche est présente dans la liste</label>
+			<label index="flexforms_general.catAndOr.2">Toutes les catégories de la fiche sont présente dans la liste</label>
+			<label index="flexforms_general.catAndOr.3">La fiche a exactement les catégories de la liste</label>
+			<label index="flexforms_general.catAnd">OR</label>
+			<label index="flexforms_general.catOr">AND</label>
+			<label index="flexforms_additional.nbElement">Nombre d'éléments par page :</label>
+			<label index="flexforms.tab.ts">Configuration typoscript spécifique au plugin :</label>
+			<label index="pi1_title">Annuaires</label>
+			<label index="pi1_plus_wiz_description">Système de gestion des annuaires.</label>
+		</languageKey>
+		<languageKey index="fr" type="array">
+			<label index="flexforms_tab.settings">Paramètre</label>
+			<label index="flexforms_general.mode">Vue</label>
+			<label index="flexforms_general.mode.e_annuaires_show">Détail</label>
+			<label index="flexforms_general.mode.e_annuaires_listOnly">Liste</label>
+			<label index="flexforms_general.mode.e_annuaires_detail">Détail</label>
+			<label index="flexforms_general.mode.e_annuaires_recherche">Recherche</label>
+			<label index="flexforms_general.mode.e_annuaires_resultat">Résultat</label>
+			<label index="flexforms_general.mode.e_annuaires_update">Modification</label>
+			<label index="flexforms_general.mode.e_annuaires_new">Gestion des fiches</label>
+			<label index="flexforms_general.mode.search">Moteur de recherche</label>
+			<label index="flexforms_general.mode.form">Formulaire frontend</label>
+			<label index="flexforms_template.templateLayoutListe">Templates pour la vue liste</label>
+			<label index="flexforms_template.templateLayoutDetail">Templates pour la vue détail</label>
+			<label index="flexforms_template.templateLayoutSearch">Templates pour la vue formulaire de recherche</label>
+			<label index="flexforms_template.templateLayoutResult">Templates pour la vue resultats de la recherche</label>
+			<label index="flexforms_template.templateLayoutNew">Templates pour la vue création de fiche annuaire en fe</label>
+			<label index="flexforms_template.templateLayoutEdit">Templates pour la vue édition de fiche annuaire en fe</label>
+			<label index="flexforms_general.orderBy">Trier par</label>
+			<label index="flexforms_general.orderBy.tstamp">Date de modification</label>
+			<label index="flexforms_general.orderBy.crdate">Date de création</label>
+			<label index="flexforms_general.orderBy.sorting">Ordre du backend</label>
+			<label index="flexforms_general.orderBy.title">Titre</label>
+			<label index="flexforms_general.whichMember">Selection Membre</label>
+			<label index="flexforms_general.categories">Selection Catégorie</label>
+			<label index="flexforms_general.whichCommune">Selection Ville</label>
+			<label index="flexforms_general.whichDistrict">Selection Quartier</label>
+			<label index="flexforms_tab.filter">Configuration des filtres</label>
+			<label index="flexforms_tab.additional">Paramètre additionnel</label>
+			<label index="flexforms_additional.detailPid">Page détail</label>
+			<label index="flexforms_additional.listPid">Page liste</label>
+			<label index="flexforms_additional.resultPid">Page resultat de recherche</label>
+			<label index="flexforms_additional.ordre">Ordre</label>
+			<label index="flexforms_additional.ordre.asc">Croissant</label>
+			<label index="flexforms_additional.ordre.desc">Décroissant</label>
+			<label index="flexforms_additional.menu_abc">Affichage de l'abécédaire </label>
+			<label index="flexforms_additional.latest">Nombre d'item en mode liste</label>
+			<label index="flexforms_additional.pageBrowser">Activer la pagination</label>
+			<label index="flexforms_tab.editFe">Edition Frontend</label>
+			<label index="flexforms_editFe.storagePid">Edition Frontend</label>
+			<label index="flexforms_tab.template">Configuration avancée</label>
+			<label index="flexforms_template.template">Template</label>
+			<label index="coord">Coordonnées</label>
+			<label index="doc">Documents rattachés</label>
+			<label index="cat">Catégories</label>
+			<label index="tabs.access">Acces</label>
+			<label index="ext_conf_types">Liste des types d'annuaires(1-nomType1,2-nomType2,3-nomType3 pas d'espace apres les virgules)</label>
+			<label index="typeCanton">Id du type "Canton"</label>
+			<label index="flexforms_filter.type">Type d'annuaire : </label>
+			<label index="flexforms_general.catAndOr">Affichage des catégorie si :</label>
+			<label index="flexforms_general.catAndOr.1">Une des catégorie de la fiche est présente dans la liste</label>
+			<label index="flexforms_general.catAndOr.2">Toutes les catégories de la fiche sont présente dans la liste</label>
+			<label index="flexforms_general.catAndOr.3">La fiche a exactement les catégories de la liste</label>
+			<label index="flexforms_general.catAnd">OR</label>
+			<label index="flexforms_general.catOr">AND</label>
+			<label index="flexforms_additional.nbElement">Nombre d'éléments par page :</label>
+			<label index="flexforms.tab.ts">Configuration typoscript spécifique au plugin (plugin.tx_eannuaires_pi1.settings{...}) :</label>
+			<label index="pi1_title">Annuaires</label>
+			<label index="pi1_plus_wiz_description">Système de gestion des annuaires.</label>
+		</languageKey>
+
+		<languageKey index="es" type="array">
+			
+		</languageKey>
+
+		<languageKey index="de" type="array">
+
+		</languageKey>
+
+		<languageKey index="nl" type="array">
+		
+		</languageKey>
+	</data>
+</T3locallang>

@@ -1,0 +1,31 @@
+{namespace enews=Tx_ENews_ViewHelpers}
+<f:layout name="Default"/>
+
+<f:section name="main">
+            
+	<f:if condition="{0:etat} == {0:'form'}">
+		<f:then>
+			<f:if condition="{settings.templateLayoutSendMail}">	
+				<f:then>
+				</f:then>
+				<f:else>
+					<f:form object="{sendObjet}" name="send">
+						<fieldset>
+							<div class="keyWord">
+								<label for="keyWord">Entrer un mot clé :</label>
+								<f:form.textfield property="titre" id="keyWord" />
+							</div>
+							<div class="categorie">
+								<label for="categorie">Catégorie</label>
+								<enews:select property="categories" options="{categories}" id="categorie" />
+							</div>
+							<f:form.submit value="Rechercher" />
+						</fieldset>
+					</f:form>
+				</f:else>
+		</f:then>
+		<f:else>
+			<p>Le mail a bien été envoyé!</p>
+		</f:else>
+                	
+</f:section> 

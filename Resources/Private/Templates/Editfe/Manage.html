@@ -1,0 +1,50 @@
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<f:flashMessages />
+
+<f:comment>
+	<f:debug>{all}</f:debug>
+</f:comment>
+
+<f:if condition="{0:status} == {0:'no_user'}">
+	<f:then>
+		<f:comment>|******* Si l'internaute n'est pas connecté en FE, on affiche un message *******|</f:comment>
+		<p>Vous devez être connecté en frontend afin de pouvoir accéder à la gestion des fiches annuaires.</p>
+	</f:then>
+	<f:else>
+		<f:if condition="{0:status} == {0:'updateDone'}">
+			<f:then>
+				<f:comment>|******* Si une fiche vient d'être mise à jour, on affiche un message *******|</f:comment>
+				<p>Votre fiche a bien été mise à jour.</p>
+			</f:then>
+			<f:else>
+				<f:if condition="{0:status} == {0:'deleted'}">
+					<f:then>
+						<f:comment>|******* Si une fiche vient d'être supprimée, on affiche un message *******|</f:comment>
+						<p>Votre fiche a bien été supprimé.</p><br />
+						<f:link.action action="manage" >Retour à la liste de mes fiches</f:link.action>
+					</f:then>
+					<f:else>
+						<f:render partial="Editfe/ListeFichesUser" arguments="{fiches:fiches, settings:settings}" />
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>
+
+
+</f:section>

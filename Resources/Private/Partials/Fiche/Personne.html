@@ -1,0 +1,51 @@
+{namespace egmap=Emagineurs\EGmap\ViewHelpers}
+
+<f:for each="{fiche.image}" as="imageItem" >
+    <f:media file="{imageItem}" height="120" width="90c" />
+</f:for>
+<f:switch expression="{fiche.civility}">
+	<f:case value="0">M</f:case>
+	<f:case value="0">Mlle</f:case>
+	<f:case value="2">Mme</f:case>
+</f:switch>
+{fiche.title}
+{fiche.firstname}<br/>
+
+<f:if condition="{fiche.cantonstexte}">
+	<p><strong>Fonction :</strong> {fiche.cantonstexte}</p>
+</f:if>
+
+<p><strong>Adresse :</strong><br/>
+	{fiche.address}<br/>
+	<f:if condition="{fiche.address2}">
+		{fiche.address2}<br/>
+	</f:if>
+	<f:if condition="{fiche.bp}">
+		{fiche.bp}<br/>
+	</f:if>
+	<f:for each="{fiche.city}" as="ville">
+	   {ville.codePostal} {ville.title}
+	</f:for><br/>
+	<f:if condition="{fiche.cedex}">
+		{fiche.cedex}<br/>
+	</f:if>
+</p>
+
+<f:if condition="{fiche.phone}">
+    <p><strong>Tél :</strong> {fiche.phone}</p>
+</f:if>
+<f:if condition="{fiche.phonesecondaire}">
+    <p><strong>Mobile :</strong> {fiche.phonesecondaire}</p>
+</f:if>
+<f:if condition="{fiche.email}">
+    <p><strong>Courriel :</strong> <f:link.email email="{fiche.email}" /></p>
+</f:if>
+<f:format.raw>{fiche.description}</f:format.raw><br/>
+
+<f:for each="{fiche.categories}" as="category" iteration="itemIteration">
+    <f:if condition="{itemIteration.isLast}">
+    	<f:then>{category.title}</f:then>
+    	<f:else>{category.title},</f:else>
+    </f:if>
+</f:for>
+<egmap:map pois="tx_eannuaires_domain_model_fiche_{fiche.uid}" property="{width:'20%',height:'200px',map:{recherche:{actif:0}}}"/>

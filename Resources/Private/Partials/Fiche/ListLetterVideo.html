@@ -1,0 +1,47 @@
+{namespace annuaire=Emagineurs\EAnnuaires\ViewHelpers}
+
+<f:for each="{fiches}" as="fiche" iteration="itemIteration"> 
+    <f:if condition="{annuaire:FirstLetter(fiche:fiche, lettre:letter, complete:1)}">
+        <f:then>
+            <f:render section="content" arguments="{fiche:fiche}" />
+        </f:then>
+        <f:else>
+            <f:render section="content" arguments="{fiche:fiche}" />
+        </f:else>
+    </f:if>
+</f:for>
+   
+<f:section name="content">
+    <div class="display liste_annu">
+        <div class="image_annuaire_personne"> 
+            <f:for each="{fiche.image}" as="imageItem" >
+                <f:link.action pageUid="{settings.detailPid}" action="show" arguments="{fiche : fiche}">
+                    <f:media file="{imageItem}" height="120" />
+                </f:link.action>
+            </f:for>
+        </div>
+        <div class="info_annuaire_personne">  
+            <p><strong>
+                <f:link.action pageUid="{settings.detailPid}" action="show" arguments="{fiche : fiche}">
+                    {fiche.title}
+                </f:link.action>
+            </strong></p> 
+            <f:if condition="{fiche.description}">
+                <p><strong>Description :</strong> {fiche.description }</p>
+            </f:if>
+            <f:if condition="{fiche.cell}">
+                <p><strong>Durée :</strong> {fiche.cell}</p>
+            </f:if>
+            <f:if condition="{fiche.categories}">
+                <p><strong>Catégorie(s) :</strong>
+                <f:for each="{fiche.categories}" as="category" iteration="itemIteration">
+                    <f:if condition="{itemIteration.isLast}">
+                        <f:then>{category.title}</f:then>
+                        <f:else>{category.title},</f:else>
+                    </f:if>
+                </f:for>
+                </p>
+            </f:if>
+        </div>
+    </div>
+</f:section>

@@ -1,0 +1,13 @@
+<!-- ###SUBPART_CURRENT_TCATYPE### begin -->
+
+	<!-- ###SUBPART_CURRENT_TCATYPE_SIMPLE### begin -->
+		<label for="field_###FIELD###">###FIELD### : *</label>
+		<f:form.textfield property="###FIELD###" id="field_###FIELD###" />
+	<!-- ###SUBPART_CURRENT_TCATYPE_SIMPLE### end -->
+
+	<!-- ###SUBPART_CURRENT_TCATYPE_DATE### begin -->
+		<label for="field_###FIELD###" >###FIELD### : *</label>
+		<f:form.textfield name="fiche[###FIELD###]" value="{f:format.date(format:'%d-%m-%Y', date: fiche.###FIELD###)}" id="field_###FIELD###" />
+	<!-- ###SUBPART_CURRENT_TCATYPE_DATE### end -->
+
+<!-- ###SUBPART_CURRENT_TCATYPE### end -->

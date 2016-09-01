@@ -1,0 +1,13 @@
+<f:layout name="Backend/Default" />
+
+<f:section name="content">
+
+<p><strong>/!\ Attention</strong>, toutes les conf précédentes seront supprimés. Le but de ce module est avant tout de permettre les passages en production, donc de n'importer que des conf finis.</p>
+
+<f:form method="post" action="import" enctype="multipart/form-data" >
+	<label for="uploadConfField">Selectionner le fichier à importer</label><br />
+	<f:form.upload name="confToImport" id="uploadConfField" /><br />
+	<f:form.submit name="importConf" value="Importer la conf" />{message}
+</f:form>
+
+</f:section>

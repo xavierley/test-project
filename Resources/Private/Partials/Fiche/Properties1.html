@@ -1,0 +1,33 @@
+<div class="tx-e-annuaires" >
+<h2><f:comment>{fiche.civility}</f:comment>&nbsp;{fiche.name}&nbsp;{fiche.firstname}</h2>
+<div class="detail_annu">
+    <div class="image_annuaire image_annuaire_personne"> 
+        <f:for each="{fiche.image}" as="imageItem" >
+            <f:image src="{imageItem.media.originalResource.publicUrl}" maxWidth="90" maxHeight="120"  minWidth="90"  minHeight="120" width="90c"   height="120c" />
+        </f:for>
+    </div>
+    <div class="info_annuaire info_annuaire_personne"> 
+        <f:if condition="{fiche.office}">
+            <div><strong>{fiche.office}</strong></div>
+        </f:if>
+        <f:if condition="{fiche.www}">
+            <div><strong>Fonction</strong>{fiche.www}</div>
+        </f:if>
+        <br/>
+        <br/>
+        <f:if condition="{fiche.phone}">
+            <div><strong>Téléphone fixe :</strong> {fiche.phone}</div>
+        </f:if>
+        <f:if condition="{fiche.cell}">
+            <div><strong>Téléphone portable :</strong> {fiche.cell }</div>
+        </f:if>
+         <f:if condition="{fiche.email}">
+            <div><strong>Courriel :</strong><a href="mailto:{fiche.email}"> {fiche.email}</a></div>
+        </f:if>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="description">
+    <p><f:format.html>{fiche.description}</f:format.html></p>
+</div>
+</div>

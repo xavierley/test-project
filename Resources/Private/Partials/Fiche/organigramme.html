@@ -1,0 +1,16 @@
+<f:for each="{organigramme}" as="cat" key="catUid" >
+    <f:for each="{cat}" as="membre" key="key" >
+        <f:if condition="{key} == 0" >
+            <div class="cat_{catUid}">
+                <f:for each="{membre}" as="chefItem" >
+                    <f:render partial="Fiche/itemOrganigramme" arguments="{fiche: chefItem, chef: 1}" />
+                </f:for>
+                <div class="souschefs">
+                    <f:for each="{cat.1}" as="currentItem" >
+                        <f:render partial="Fiche/itemOrganigramme" arguments="{fiche: currentItem}" />
+                    </f:for>
+                </div>
+            </div>    
+        </f:if>
+    </f:for>
+</f:for>

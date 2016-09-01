@@ -1,0 +1,38 @@
+{namespace enews=Tx_ENews_ViewHelpers}
+{namespace elib = Emagineurs\ELib\ViewHelpers}
+
+<f:comment>
+	<f:debug>{datas.categories}</f:debug>
+	<f:debug>{datas}</f:debug>
+	<f:debug>{elib:PhpFunc(func:'explode', args:'{0:\'_\',1:\'test_pour_un_explode\'}')}</f:debug>
+</f:comment>
+
+<p>Envoyez vos remarques sur la fiche :</p>
+<h5>{datas.fiche.title}</h5><br /><br />
+
+<f:form object="{datas.sendObjet}" name="fields" addQueryString="1" argumentsToBeExcludedFromQueryString="{1:'id'}" >
+	<fieldset>
+		<div class="envoi_remarque_name">
+			<label for="envoi_remarque_name">Nom :</label>
+			<f:form.textfield property="name" id="envoi_remarque_name" />
+		</div>
+		<div class="envoi_remarque_firstname">
+			<label for="envoi_remarque_firstname">Prénom :</label>
+			<f:form.textfield property="firstname" id="envoi_remarque_firstname" />
+		</div>
+		<div class="envoi_remarque_mail">
+			<label for="envoi_remarque_mail">Mail :</label>
+			<f:form.textfield property="mail" id="envoi_remarque_mail" />
+		</div>
+		<div class="envoi_remarque_remarque">
+			<label for="envoi_remarque_remarque">Vos remarques :</label>
+			<f:form.textarea property="remarque" id="envoi_remarque_remarque" rows="10" cols="60" />
+		</div>
+		
+		<enews:select property="categories" options="{datas.categories}" id="categorie" multiple="1" size="6" />
+		
+		<f:form.hidden name="activeSend" value="1" />
+		
+		<f:form.submit value="Envoyer" />
+	</fieldset>
+</f:form>

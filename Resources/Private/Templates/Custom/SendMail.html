@@ -1,0 +1,30 @@
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Single View for Fiche</h1>
+
+<f:flashMessages />
+
+<h3>Ceci est le contenu par défaut de mon mail</h3>	
+Il concerne la fiche {fiche.title}, la structure en question se trouve a àl'adresse suivante :<br/>
+{fiche.address} - {fiche.address2}<br/>
+<f:for each="{fiche.city}" as="cityItem">
+	{cityItem.title} - {cityItem.codePostal}
+</f:for>
+<br />
+
+Infos complémentaires : <br />
+{fiche.description}
+
+</f:section>

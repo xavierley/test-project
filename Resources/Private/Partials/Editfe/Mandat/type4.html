@@ -1,0 +1,11 @@
+<div>
+	<p>typemandat : </p>
+	<f:form.select property="typemandat" id="field_mandat_type" options="{typemandat}" class="inlineFormField" />
+</div>
+<div>
+	<p>communemandat : </p>
+	<f:for each="{communemandat}" as="currentItem" iteration="itemIteration" key="key" >
+		<label for="check_communemandat_{itemIteration.cycle}">{currentItem}</label>
+		<f:form.checkbox multiple="1" property="communemandat" value="{key}" id="check_communemandat_{itemIteration.cycle}" class="inlineFormField" />
+	</f:for>
+</div>

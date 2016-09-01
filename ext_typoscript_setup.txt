@@ -1,0 +1,27 @@
+config.tx_extbase.persistence.classes {
+	Emagineurs\EAnnuaires\Domain\Model\Categorie {
+		mapping{
+			tableName = sys_category
+		}
+	}
+	Emagineurs\EAnnuaires\Domain\Model\Filereference {
+		mapping{
+			tableName = sys_file_reference
+		}
+	}
+	Emagineurs\EAnnuaires\Domain\Model\City {
+		mapping{
+			tableName = tx_enews_domain_model_commune
+		}
+	}
+	Emagineurs\EAnnuaires\Domain\Model\Conf\Typeannuaire {
+		mapping{
+			tableName = tx_eannuaires_domain_model_typeannuaire
+		}
+	}
+	Emagineurs\EAnnuaires\Domain\Model\Conf\Champbdd {
+		mapping{
+			tableName = tx_eannuaires_domain_model_champbdd
+		}
+	}
+}

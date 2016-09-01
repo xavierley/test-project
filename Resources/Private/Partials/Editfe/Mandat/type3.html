@@ -1,0 +1,22 @@
+<div>
+	<p>typemandat : </p>
+	<f:form.select property="typemandat" id="field_mandat_type" options="{typemandat}" class="inlineFormField" />
+</div>
+<div>
+	<p>circonscription : </p>
+	<f:for each="{circonscription}" as="currentItem" iteration="itemIteration" key="key" >
+		<label for="check_circonscription_{itemIteration.cycle}">{currentItem}</label>
+		<f:form.checkbox multiple="1" property="circonscription" value="{key}" id="check_circonscription_{itemIteration.cycle}" class="inlineFormField" />
+	</f:for>
+</div>
+<div>
+	<p>groupepolitique : </p>
+	<f:for each="{groupepolitique}" as="currentItem" iteration="itemIteration" key="key" >
+		<label for="check_groupepolitique_{itemIteration.cycle}">{currentItem}</label>
+		<f:form.checkbox multiple="1" property="groupepolitique" value="{key}" id="check_groupepolitique_{itemIteration.cycle}" class="inlineFormField" />
+	</f:for>
+</div>
+<div>
+	<label for="field_mandat_siteinternet">siteinternet : </label>
+	<f:form.textfield property="siteinternet" id="field_mandat_siteinternet" class="inlineFormField" />
+</div>

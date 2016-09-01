@@ -1,0 +1,43 @@
+<f:layout name="Default" />
+
+This template displays a EDIT form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Edit.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<div class="submit_inline_form" id="submit_inline_form_uploadimage">
+		<f:if condition="{submittedUploadimage}">
+			<ul>
+				<f:for each="{submittedUploadimage}" as="currentUploadimage" key="key" iteration="uploadimageIteration" >
+					<li>
+						Fichier N°{uploadimageIteration.cycle}<input type="button" value="supprimer" id="remove-image-{key}" class="removeInline" />
+					</li>
+				</f:for>
+			</ul>
+		</f:if>
+				
+		<div>
+			<f:form.upload name="uploadimage-media" id="mediaFile" class="inlineFormField inlineFormFieldImage" />
+			<div>	
+				<label for="uploadimage-media-title">Titre du fichier</label>
+				<f:form.textfield name="uploadimage-media-title" id="uploadimage-media-title" />
+			</div>	
+			<div>	
+				<label for="uploadimage-media-description">description du fichier</label>
+				<f:form.textfield name="uploadimage-media-description" id="uploadimage-media-description" />
+			</div>	
+			<input type="button" value="Ajouter fichier" class="submitButtonFal" />
+		</div>
+		
+		<f:form.hidden name="tx_eannuaires_pi1[uploadimage][pid]" value="0" class="inlineFormField" />
+		
+		<input type="button" value="Ajouter" class="submitButton" />
+	</div>		
+</f:section>

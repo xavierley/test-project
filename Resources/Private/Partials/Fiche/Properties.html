@@ -1,0 +1,33 @@
+<div class="tx-e-annuaires" >
+<h2>{fiche.title}</h2>
+<div class="detail_annu">
+    <div class="image_annuaire"> 
+        <f:for each="{fiche.image}" as="imageItem" >
+            <f:image src="{imageItem.media.originalResource.publicUrl}" maxWidth="250" maxHeight="150"  minWidth="250"  minHeight="150" width="250c"   height="150c" />
+        </f:for>
+    </div>
+    <div class="info_annuaire"> 
+        <f:if condition="{fiche.name}">
+            <div><strong> Président : </strong>{fiche.name}</div>
+        </f:if>
+        <f:if condition="{fiche.firstname}">
+            <div><strong> Directeur : </strong>{fiche.firstname}</div>
+        </f:if>
+        <br/>
+        <br/>
+        <f:if condition="{fiche.phone}">
+            <div><strong>Téléphone :</strong> {fiche.phone}</div>
+        </f:if>
+        <f:if condition="{fiche.fax}">
+            <div><strong>Fax :</strong> {fiche.fax}</div>
+        </f:if>
+         <f:if condition="{fiche.email}">
+            <div><strong>Courriel :</strong><a href="mailto:{fiche.email}"> {fiche.email}</a></div>
+        </f:if>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="description">
+    <p><f:format.html>{fiche.description}</f:format.html></p>
+</div>
+</div>

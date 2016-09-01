@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-10-25T09:35:14Z" product-name="e_annuaires">
+		<header/>
+		<body>
+			<trans-unit id="pages.typeannuaire">
+				<source>Type d'annuaires stocké dans ce dossier</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche">
+				<source>Fiche</source>
+			</trans-unit>
+			<trans-unit id="newTab">
+				<source>Onglet test</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.title">
+				<source>Titre</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.name">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="name">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.firstname">
+				<source>Prénom</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.address">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.cedex">
+				<source>Cedex</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.fax">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.Country">
+				<source>Pays</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.zipcode">
+				<source>Code postal</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.bp">
+				<source>Boite postale</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.cell">
+				<source>Télèphone mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.phone">
+				<source>Télèphone fixe</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.config">
+				<source>Config</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.typeelement">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.lat">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.lng">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.picto">
+				<source>Picto</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.www">
+				<source>Www</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.feuser">
+				<source>Feuser</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.civility">
+				<source>Civilité</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.office">
+				<source>Office</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.city">
+				<source>Ville</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.district">
+				<source>Quartier</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.documents">
+				<source>Medias</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.address2">
+				<source>Adresse 2</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.liens">
+				<source>Liens</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.canton">
+				<source>Canton</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.commission">
+				<source>Commission</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.actions">
+				<source>Actions</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.objet">
+				<source>Objet</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.production">
+				<source>Production</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.ouvert">
+				<source>Espace ouvert au public</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.ouvertcomment">
+				<source>Espace ouvert au public - commentaire</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.beneficiaire">
+				<source>Bénéficiaire</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.enjeux">
+				<source>Enjeux</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.uploadimage">
+				<source>Images uploadés</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.contacts">
+				<source>Contacts</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.linkcontact">
+				<source>Lien vers le formulaire de contact</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.hebergementtemp">
+				<source>Hébergerment temporaire</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.accueiljour">
+				<source>Accueil de jour</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.uniteterritoriale">
+				<source>Unité territoriale</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.cantonstexte">
+				<source>Cantons</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.intercommunalite">
+				<source>Intercommunalité</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.datefiche">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.epci">
+				<source>EPCI</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.pack">
+				<source>Pack</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.phoneSecondaire">
+				<source>Téléphone mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.intituleAddress">
+				<source>Intitulé de l'adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.faxSecondaire">
+				<source>Fax secondaire</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.country">
+				<source>Pays</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.typeHandicap">
+				<source>Type de handicap</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.contrat">
+				<source>Contrat</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.population">
+				<source>Population</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.mds">
+				<source>MDS</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.cdps">
+				<source>CDPS</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_categorie">
+				<source>Categorie</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_categorie.titre">
+				<source>Titre</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_categorie.parent">
+				<source>Parent</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.cityLinked">
+				<source>Communes rattachées</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_city.titre">
+				<source>Label</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.partipolitique">
+				<source>Parti Politique</source>
+			</trans-unit>
+			<trans-unit id="partipolitique">
+				<source>Parti Politique</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_objet">
+				<source>Objet</source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_district">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_district.titre">
+				<source>Titre</source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_documents">
+				<source>Médias</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_documents.titre">
+				<source>Titre</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_documents.fichier">
+				<source>Fichier</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_documents.typedisplay">
+				<source>Type de média</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_lien">
+				<source>Lien depuis l'annuaire</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_lien.titre">
+				<source>Intitulé</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_lien.url">
+				<source>Url du lien</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_lien.is_facebook">
+				<source>Lien vers la page Facebook</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_lien.is_twitter">
+				<source>Lien vers la page twitter</source>
+			</trans-unit>
+			<trans-unit id="testLabel">
+				<source>Test des labels configurables</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_image">
+				<source>Image de FAL</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_image.media">
+				<source>Choisir une image</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission">
+				<source>Commission</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.titre">
+				<source>Nom de la commission</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.president">
+				<source>Président</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.membres">
+				<source>Membres</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.attributions">
+				<source>Attributions</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_actions">
+				<source>Actions</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_actions.titre">
+				<source>Intitulé du type d'action</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_eannuaires_domain_model_pack">
+				<source>Pack</source>
+			</trans-unit>			
+			<trans-unit id="tx_eannuaires_domain_model_pack.title">
+				<source>Nom du pack</source>
+			</trans-unit>
+			
+			<trans-unit id="intitule">
+				<source>Intitulé</source>
+			</trans-unit>
+			<trans-unit id="nompresident">
+				<source>Nom et prénom du président</source>
+			</trans-unit>
+			<trans-unit id="nomdirecteur">
+				<source>Nom et prénom du directeur</source>
+			</trans-unit>
+			<trans-unit id="telephone">
+				<source>Téléphone </source>
+			</trans-unit>
+			<trans-unit id="nomorganisme">
+				<source>Nom de l’organisme </source>
+			</trans-unit>
+			<trans-unit id="fonction">
+				<source>Fonction</source>
+			</trans-unit>
+			<trans-unit id="flexform.filtres.categories.displayParent">
+				<source>Afficher la catégorie parente dans le menu déroulant des catégories (recherche uniquement)</source>
+			</trans-unit>
+			<trans-unit id="flexform.filtres.categories.displayParent.1">
+				<source>Valeur par défaut</source>
+			</trans-unit>
+			<trans-unit id="flexform.filtres.categories.displayParent.2">
+				<source>Oui</source>
+			</trans-unit>
+			<trans-unit id="flexform.filtres.categories.displayParent.3">
+				<source>Non</source>
+			</trans-unit>
+			<trans-unit id="intitule/nom">
+				<source>Intitulé / Nom</source>
+			</trans-unit>
+			<trans-unit id="complementAdresse">
+				<source>Complément d'adresse</source>
+			</trans-unit>
+			<trans-unit id="intitule/nom">
+				<source>Intitulé / Nom</source>
+			</trans-unit>
+			<trans-unit id="ville">
+				<source>Ville</source>
+			</trans-unit>
+			<trans-unit id="telephone">
+				<source>Téléphone</source>
+			</trans-unit>
+			<trans-unit id="mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="siteInternet">
+				<source>Site Internet</source>
+			</trans-unit>
+			<trans-unit id="infosSup">
+				<source>Informations supplémentaires</source>
+			</trans-unit>
+			<trans-unit id="latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="categorie">
+				<source>Catégorie</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_lien.url">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="typesEtablissement">
+				<source>Types d'établissement</source>
+			</trans-unit>
+			<trans-unit id="typesHandicap">
+				<source>Types de handicap</source>
+			</trans-unit>
+			<trans-unit id="SEGPA">
+				<source>SEGPA (uniquement pour les collèges)</source>
+			</trans-unit>
+			<trans-unit id="contrat">
+				<source>Contrat</source>
+			</trans-unit>
+
+			<trans-unit id="president">
+				<source>Président</source>
+			</trans-unit>
+			<trans-unit id="date_creation">
+				<source>Date de création</source>
+			</trans-unit>
+			<trans-unit id="typeEpci">
+				<source>Type d'EPCI</source>
+			</trans-unit>
+			<trans-unit id="membres">
+				<source>Membres (Essonne)</source>
+			</trans-unit>
+			<trans-unit id="membre">
+				<source>Membre (hors Essonne)</source>
+			</trans-unit>
+			<trans-unit id="competence">
+				<source>Compétence</source>
+			</trans-unit>
+			<trans-unit id="horaires">
+				<source>Horaires d'ouverture</source>
+			</trans-unit>
+			<trans-unit id="legendePhoto">
+				<source>Légende de la photo</source>
+			</trans-unit>
+			<trans-unit id="nomHabitants">
+				<source>Nom des habitants</source>
+			</trans-unit>
+			<trans-unit id="population">
+				<source>Population</source>
+			</trans-unit>
+			<trans-unit id="urlVA">
+				<source>URL vue aérienne</source>
+			</trans-unit>
+			<trans-unit id="urlPO">
+				<source>URL plan occupation</source>
+			</trans-unit>
+			<trans-unit id="horsEssonne">
+				<source>Est située hors Essonne</source>
+			</trans-unit>
+			<trans-unit id="regionNaturelle">
+				<source>Région naturelle</source>
+			</trans-unit>
+			<trans-unit id="arrondissement">
+				<source>Arrondissement</source>
+			</trans-unit>
+			<trans-unit id="cantons">
+				<source>Cantons</source>
+			</trans-unit>
+			<trans-unit id="circonsLegis">
+				<source>Circonscription législative</source>
+			</trans-unit>
+			<trans-unit id="MDS">
+				<source>MDS</source>
+			</trans-unit>
+			<trans-unit id="CDPS">
+				<source>CDPS</source>
+			</trans-unit>
+			<trans-unit id="representant">
+				<source>Représentant</source>
+			</trans-unit>
+			<trans-unit id="photo">
+				<source>Photo</source>
+			</trans-unit>
+			<trans-unit id="date_n">
+				<source>Date de naissance</source>
+			</trans-unit>
+			<trans-unit id="profession">
+				<source>Profession</source>
+			</trans-unit>
+			<trans-unit id="partiPolitique">
+				<source>Parti politique</source>
+			</trans-unit>
+			<trans-unit id="biographie">
+				<source>Biographie</source>
+			</trans-unit>
+			<trans-unit id="prenom">
+				<source>Prénom</source>
+			</trans-unit>
+
+			<trans-unit id="intitule_pp">
+				<source>Intitulé de l’adresse</source>
+			</trans-unit>
+			<trans-unit id="intitule_sc">
+				<source>Intitulé de l’adresse secondaire</source>
+			</trans-unit>
+			<trans-unit id="adresse_pp">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="adresse_sc">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="adresse2_pp">
+				<source>Complément d'adresse</source>
+			</trans-unit>
+			<trans-unit id="adresse2_sc">
+				<source>Complément d'adresse</source>
+			</trans-unit>
+			<trans-unit id="ville_pp">
+				<source>Ville</source>
+			</trans-unit>
+			<trans-unit id="ville_sc">
+				<source>Ville</source>
+			</trans-unit>
+			<trans-unit id="telephone_pp">
+				<source>Téléphone</source>
+			</trans-unit>
+			<trans-unit id="telephone_sc">
+				<source>Téléphone</source>
+			</trans-unit>
+			<trans-unit id="fax_pp">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="fax_sc">
+				<source>Fax</source>
+			</trans-unit>
+			<trans-unit id="mail_pp">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="mail_sc">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="latitude_pp">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="latitude_sc">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude_pp">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="longitude_sc">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="email_pp">
+				<source>E-mail</source>
+			</trans-unit>
+			<trans-unit id="email_sc">
+				<source>E-mail</source>
+			</trans-unit>
+			<trans-unit id="lat2">
+				<source>Latitude :</source>
+			</trans-unit>
+			<trans-unit id="long2">
+				<source>Longitude :</source>
+			</trans-unit>
+			<trans-unit id="typeStructure">
+				<source>Catégorie :</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.mandats">
+				<source>Mandats</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.titre">
+				<source>Fonction</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.membres">
+				<source>Élus</source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_mandat">
+				<source>Mandat</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.typeMandat">
+				<source>Type de mandat</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.communeMandat">
+				<source>Commune du mandat</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.circonscription">
+				<source>Circonscription</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.groupepolitique">
+				<source>Groupe Politique</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.siteInternet">
+				<source>Site Internet</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.nomEpci">
+				<source>Nom de l'EPCI</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.canton">
+				<source>Canton</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.fonctions">
+				<source>Fonctions</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.delegation">
+				<source>Délégation</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.fonctionAutre">
+				<source>Autre fonction</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.commissions">
+				<source>Commissions</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_mandat.representations">
+				<source>Représentations</source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_groupepolitique">
+				<source>Groupe Politique</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_groupepolitique.intitule">
+				<source>Intitulé</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_groupepolitique.typeMandat">
+				<source>Type de groupe politique</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_groupepolitique.site">
+				<source>Site Internet</source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_image.title">
+				<source>Légende (Renommer)</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_commission.title">
+				<source>Représentants</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_objet.title">
+				<source>Types d'établissements</source>
+			</trans-unit>
+			
+			<trans-unit id="responsable">
+				<source>Nom du responsable</source>
+			</trans-unit>
+			
+			<trans-unit id="video.title">
+				<source>Titre de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="video.description">
+				<source>Résumé de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="video.theme">
+				<source>Thème de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="video.duree">
+				<source>Durée de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="video.iframe">
+				<source>Code de partage de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="video.image">
+				<source>Image de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="video.file">
+				<source>Fichier de la vidéo</source>
+			</trans-unit>
+			<trans-unit id="personne.title">
+				<source>Nom</source>
+			</trans-unit>
+			<trans-unit id="personne.cantonstexte">
+				<source>Fonction</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

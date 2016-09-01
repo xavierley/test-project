@@ -1,0 +1,293 @@
+plugin.tx_eannuaires {
+	mvc.callDefaultActionIfActionCantBeResolved = 1
+	view {
+		templateRootPaths {
+			0 = {$plugin.tx_eannuaires.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			0 = {$plugin.tx_eannuaires.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			0 = {$plugin.tx_eannuaires.view.layoutRootPath}
+		}
+	}
+	settings{
+		getListe{
+			commissions = tx_eannuaires_domain_model_commission
+		}
+		filtre{
+			ficheType{
+				typeRequete = equals
+				champFiltre = typeelement
+				table = tx_eannuaires_domain_model_fiche
+				caseSensitive = 0
+			}
+			pidList{
+				typeRequete = in
+				champFiltre = pid
+				table = pages
+				parentField = pid
+			}
+			whichMember{
+				typeRequete = in
+				champFiltre = uid
+				table = tx_eannuaires_domain_model_fiche
+			}
+			categories{
+				typeRequete = typeCat
+				champFiltre = categories
+				parentField = parent
+				table = sys_category
+			}
+		}
+		search{
+			properties{
+				1 = test
+				test{
+					typeRequete = equals
+					champFiltre = title
+					caseSensitive = 0
+				}
+				2 = titre
+				titre{
+					typeRequete = keyword
+					champFiltre = title,name,description
+					keyWord = OR
+				}
+				3 = category
+				category{
+					typeRequete = typeCat
+					champFiltre = categories
+					andOr = 1
+					parentField = parent
+					table = sys_category
+					#zeroAllowed = 1
+					array{
+						#values{
+						#    item1 = valeur1
+						#    item2 = valeur2
+						#}
+						table = sys_category
+						mainCat = 1
+						displayParent = 2
+						#pid = 61
+						#recursive = 2
+						parentField = parent
+						selectFields = uid, title
+						#parentValue = 1
+						inAllSites = 0
+						#excludeItems = 2
+						#addItems{
+						#    50 = Item ajouté à la main
+						#}
+					}
+				}
+			}
+		}
+		confAbecedaire{
+			# idDuType = champ
+
+			# Pour les lieux on prend le titre
+			1 = title
+
+			# Pour les personnes on prend le nom
+			2 = name
+		}
+		organigramme{
+			chef = ouvert
+		}		
+		
+		# Confs pour la video
+		largeurLecteur = {$plugin.tx_eannuaires.settings.largeurLecteur}
+		hauteurLecteur = {$plugin.tx_eannuaires.settings.hauteurLecteur}
+		miniLecteur = {$plugin.tx_eannuaires.settings.miniLecteur}
+		
+		editFe{
+			# Options dispo non indiqué dans l'exemple des catégories de la recherche :
+			# orderBy - groupBy - andWhere
+			arrays{
+				### Tableaux générés à partir de la base de données
+				arrayActions{
+					table = tx_eannuaires_domain_model_actions
+					selectFields = uid, titre
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayCommission{
+					table = tx_eannuaires_domain_model_commission
+					selectFields = uid, titre
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayDistrict{
+					table = tx_eannuaires_domain_model_district
+					selectFields = uid, titre
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayObjet{
+					table = tx_eannuaires_domain_model_objet
+					selectFields = uid, titre
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayPack{
+					table = tx_eannuaires_domain_model_pack
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayCategories{
+					table = sys_category
+					mainCat = 1
+					displayParent = 2
+					recursive = 2
+					parentField = parent
+					selectFields = uid, title
+					parentValue = 4
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayCdps{
+					table = tx_eannuaires_domain_model_fiche
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayMds{
+					table = tx_eannuaires_domain_model_fiche
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayTypeepci{
+					table = tx_eannuaires_domain_model_fiche
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayCanton{
+					table = tx_eannuaires_domain_model_fiche
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}				
+				arrayCity{
+					table = tx_enews_domain_model_commune
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				arrayCitylinked{
+					table = tx_enews_domain_model_commune
+					selectFields = uid, title
+					inAllSites = 0
+					noEmptyValue = 1
+				}
+				### Tableaux générés à partir de la tsconfig 
+				### pour info, dans le dossier contenant les itemsprocfunc, on en a beaucoup plus que les 3 ci-dessous, c'est parce qu'elles ont été utilisé sur l'essonne 
+				### dans le cadre de la surcharge de certains champs, donc en théorie, elles sont réutilisables si besoin pour d'autres champs
+				arrayContrat{
+					fromTsconfig = tx_eannuaires.itemContrat
+				}
+				arrayTypehandicap{
+					fromTsconfig = tx_eannuaires.itemHandicap
+				}
+				arrayPartipolitique{
+					fromTsconfig = tx_eannuaires.itemPartiPolitique
+				}
+				###Tableaux générés à partir d'items renseignés en dur dans le TCA
+				arrayCivility{
+					manualList = 1
+				}
+			}
+		}
+	}
+}
+lib.baseUrlAnnuaire = TEXT
+lib.baseUrlAnnuaire.value = {$dossierSite}
+
+formInlineGeneration = PAGE
+formInlineGeneration{
+    typeNum = 2809880
+	config {
+		disableAllHeaderCode = 1
+		disablePrefixComment = 1
+		xhtml_cleaning = 0
+		admPanel = 0
+	}
+	10 = USER_INT
+	10{     
+		userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+		extensionName = EAnnuaires
+		vendorName = Emagineurs
+		pluginName = Pi1
+		switchableControllerActions{
+			Editfe{
+				1 = handleInlineGeneration
+			}
+		}
+	}
+}
+formInlineSubmit < formInlineGeneration
+formInlineSubmit.typeNum = 2809881
+formInlineSubmit.10.switchableControllerActions.Editfe.1 = handleInlineSubmit
+
+removeInlineItem < formInlineGeneration
+removeInlineItem.typeNum = 2809882
+removeInlineItem.10.switchableControllerActions.Editfe.1 = removeInlineItem
+
+changeMandatForm < formInlineGeneration
+changeMandatForm.typeNum = 2809883
+changeMandatForm.10.switchableControllerActions.Editfe.1 = editMandat
+
+uploadInlineImage < formInlineGeneration
+uploadInlineImage.typeNum = 2809884
+uploadInlineImage.10.switchableControllerActions.Editfe.1 = uploadInlineImage
+
+addFileInfo < formInlineGeneration
+addFileInfo.typeNum = 2809885
+addFileInfo.10.switchableControllerActions.Editfe.1 = addFileInfo
+
+removeImage < formInlineGeneration
+removeImage.typeNum = 2809886
+removeImage.10.switchableControllerActions.Editfe.1 = removeFile
+
+removeInlineImage < formInlineGeneration
+removeInlineImage.typeNum = 2809887
+removeInlineImage.10.switchableControllerActions.Editfe.1 = removeInlineImage
+
+
+plugin.tx_eannuaires._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-e-annuaires table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-e-annuaires table th {
+		font-weight:bold;
+	}
+
+	.tx-e-annuaires table td {
+		vertical-align:top;
+	}
+)
+module.tx_eannuaires {
+	view {
+		templateRootPath = {$plugin.tx_eannuaires.view.templateRootPath}
+		partialRootPath = {$plugin.tx_eannuaires.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_eannuaires.view.layoutRootPath}
+	}
+}

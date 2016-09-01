@@ -1,0 +1,40 @@
+<f:if condition="{itemIteration.isFirst}">
+    <f:then>
+        <f:if condition="{itemIteration.cycle} == {currentPage}">
+            <f:then> 
+                <span style="color:red;">{itemIteration.cycle}</span>
+            </f:then>
+            <f:else>
+                <f:if condition="{currentPage}">
+                    <f:then>            
+                        <f:link.action arguments="{page:prevPage}">
+                            <f:translate key="prevButton" />
+                        </f:link.action>
+                        <f:link.action arguments="{page: itemIteration.cycle}">
+                           {itemIteration.cycle}                                                  
+                        </f:link.action>                          
+                    </f:then>
+                    <f:else>
+                        <f:link.action arguments="{page:prevPage}">
+                            <f:translate key="prevButton" />
+                        </f:link.action>
+                        {itemIteration.cycle} 
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+        - 
+        <f:if condition="{itemIteration.cycle} == {currentPage}">
+            <f:then> 
+                <span style="color:red;">{itemIteration.cycle}</span>                             
+            </f:then>
+            <f:else>
+               <f:link.action arguments="{page: itemIteration.cycle}">
+                   {itemIteration.cycle}                                                  
+               </f:link.action>
+            </f:else>
+        </f:if>     
+    </f:else>
+</f:if>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-10-25T09:35:14Z" product-name="e_annuaires">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_eannuaires_domain_model_fiche">
+				<source>Fiche</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.title">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.name">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.firstname">
+				<source>firstname</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.address">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.zipcode">
+				<source>zipcode</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.bp">
+				<source>bp</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.cell">
+				<source>cell</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.phone">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.config">
+				<source>config</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.typeelement">
+				<source>typeelement</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.lat">
+				<source>lat</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.lng">
+				<source>lng</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.picto">
+				<source>picto</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.image">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.www">
+				<source>www</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.email">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.feuser">
+				<source>feuser</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.civility">
+				<source>civility</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.office">
+				<source>office</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.categories">
+				<source>categories</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.city">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.district">
+				<source>district</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_fiche.documents">
+				<source>Médias</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_eannuaires_domain_model_categorie">
+				<source>Categorie</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_categorie.titre">
+				<source>titre</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_categorie.parent">
+				<source>parent</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_eannuaires_domain_model_city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_city.tx_eannuaires_label">
+				<source>label</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_eannuaires_domain_model_district">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_district.titre">
+				<source>titre</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_eannuaires_domain_model_documents">
+				<source>Médias</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_documents.titre">
+				<source>titre</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_documents.fichier">
+				<source>fichier</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_documents.typedisplay">
+				<source>type de média</source>
+			</trans-unit>
+			<trans-unit id="label_search_word">
+				<source>Rechercher</source>
+			</trans-unit>
+			<trans-unit id="label_value_submit">
+				<source>Rechercher</source>
+			</trans-unit>
+			<trans-unit id="label_search_ville">
+				<source>Ville :</source>
+			</trans-unit>
+			<trans-unit id="label_search_theme">
+				<source>Catégorie :</source>
+			</trans-unit>
+			<trans-unit id="label_search_quartier">
+				<source>Quartier :</source>
+			</trans-unit>
+			<trans-unit id="label_prec">
+				<source> Précédent</source>
+			</trans-unit>
+			<trans-unit id="label_suiv">
+				<source>Suivant </source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_mandat">
+				<source>Mandat</source>
+			</trans-unit>
+			<trans-unit id="tx_eannuaires_domain_model_groupepolitique">
+				<source>Groupe Politique</source>
+			</trans-unit>
+
+			<trans-unit id="tx_eannuaires_domain_model_fiche.title">
+				<source>Légende</source>
+			</trans-unit>			
+		</body>
+	</file>
+</xliff>

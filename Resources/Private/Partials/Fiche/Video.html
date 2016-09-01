@@ -1,0 +1,95 @@
+{namespace webtv=Emagineurs\EAnnuaires\ViewHelpers}
+
+<f:if condition="{fiche.beneficiaire}">
+	<f:then>
+		<webtv:ExternalVideo width="{settings.largeurLecteur}" height="{settings.hauteurLecteur}">   
+			<f:format.raw>     
+				{fiche.beneficiaire}
+			</f:format.raw>
+		</webtv:ExternalVideo> 
+	</f:then>
+	<f:else>
+		<f:alias map="{file: fiche.documents.0.fichier.0.originalResource, image: fiche.image.originalResource}">
+			<f:if condition="{0:file.extension} == {0:'flv'}">
+				<f:then>
+					<div class="ewebtvacces_video">
+						<object 
+							classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+							name="player" 
+							width="{settings.largeurLecteur}"
+							height="{settings.hauteurLecteur}"    
+						>
+							<param 
+								name="movie" 
+								value="{settings.miniLecteur}" 
+							/>
+							<param name="allowfullscreen" value="true" />
+							<param name="allowscriptaccess" value="always" />
+							<param 
+								name="flashvars" 
+								value="file=/{file.publicUrl}&amp;image={f:uri.image(image: '{fiche.image.0}', width: '{settings.largeurLecteur}', height: '{settings.hauteurLecteur}')}}" />
+							<!--[if gte IE 7]> <!-->
+							<object 
+								type="application/x-shockwave-flash" 
+								data="{settings.miniLecteur}" 
+								width="{settings.largeurLecteur}"
+								height="{settings.hauteurLecteur}"    
+							>
+									<param 
+										name="movie" 
+										value="{settings.miniLecteur}" 
+									/>
+									<param name="allowfullscreen" value="true" />
+									<param name="allowscriptaccess" value="always" />
+									<param 
+										name="flashvars" 
+										value="file=/{file.publicUrl}&amp;image={f:uri.image(image: '{fiche.image.0}', width: '{settings.largeurLecteur}', height: '{settings.hauteurLecteur}')}" 
+									/>
+							</object>
+							<!--<![endif]-->
+						</object>
+					</div>
+				</f:then>
+				<f:else>  
+					<div class="ewebtvacces_video">
+					<f:for each="{fiche.documents}" as="video">
+						<video 
+							<f:if condition="{fiche.image}">
+								poster="{f:uri.image(image: '{fiche.image.0}', width: '{settings.largeurLecteur}', height: '{settings.hauteurLecteur}')}" 
+							</f:if>
+							controls="controls" 
+							width="{settings.largeurLecteur}" 
+							height="{settings.hauteurLecteur}" 
+						>      
+							<f:for each="{video.fichier}" as="media">
+								<source src="{media.originalResource.publicUrl}" type="{media.originalResource.mime_type}" />
+							</f:for>                      
+							<i><f:translate key="no_valide_fichier" /></i>
+						</video>
+					</f:for>
+					</div> 
+				</f:else>                
+			</f:if>
+		</f:alias>
+	</f:else>
+</f:if>    
+
+<f:if condition="{fiche.description}">
+    <p><strong>Description :</strong> {fiche.description }</p>
+</f:if>
+<f:if condition="{fiche.cell}">
+    <p><strong>Durée :</strong> {fiche.cell}</p>
+</f:if>
+<f:if condition="{fiche.categories}">
+    <p><strong>Catégorie(s) :</strong>
+    <f:for each="{fiche.categories}" as="category" iteration="itemIteration">
+        <f:if condition="{itemIteration.isLast}">
+            <f:then>{category.title}</f:then>
+            <f:else>{category.title},</f:else>
+        </f:if>
+    </f:for>
+    </p>
+</f:if>
+<f:if condition="{settings.listPid}">
+	<f:link.page pageUid="{settings.listPid}">Retour à la liste</f:link.page>
+</f:if>

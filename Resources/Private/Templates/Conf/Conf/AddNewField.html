@@ -1,0 +1,18 @@
+<f:for each="{newField}" as="currentField" >
+	<div class="fieldConf" >
+		<div class="firstLineConf" >
+			<h4>{currentField.title}</h4>
+			<f:image src="EXT:e_annuaires/Resources/Public/Icons/fleche_haut.png" id="decreaseSorting-{currentField.uid}" class="decreaseSorting" />
+			<f:image src="EXT:e_annuaires/Resources/Public/Icons/fleche_bas.png" id="increaseSorting-{currentField.uid}" class="increaseSorting" />
+			<f:image src="EXT:e_annuaires/Resources/Public/Icons/poubelle.gif" id="deleteChamp-{currentField.uid}" class="deleteChamp" />
+		</div>
+		<div class="secondLineConf" >
+			<label for="newLabel{currentField.uid}">Nouveau label du champ</label>
+			<input type="text" id="newLabel-{currentField.uid}" value="{currentField.label}" />
+		</div>
+		<div class="thirdLineConf" >
+			<label for="newTab{currentField.uid}">Label du nouvel onglet</label>
+			<input type="text" id="newTab-{currentField.uid}" value="{currentField.tabLabel}" />
+		</div>
+	</div>
+</f:for>

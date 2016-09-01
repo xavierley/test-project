@@ -1,0 +1,4 @@
+<f:for each="{categories}" as="cat">
+    <f:link.page pageUid="{settings.listPid}" additionalParams="{tx_eannuaires_pi1:'{catFiltre:cat.uid}'}">{cat.title}</f:link.page><br />
+    <f:render partial="Categories/childCat" arguments="{categories: cat.children}" /> 
+</f:for>
